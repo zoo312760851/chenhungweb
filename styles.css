@@ -104,7 +104,7 @@ main { display: block; }
 .page-hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: 56px; align-items: center; }
 .eyebrow { width: fit-content; display: inline-flex; align-items: center; gap: 10px; padding: 9px 13px; border: 1px solid rgba(112,230,255,.13); border-radius: 999px; color: var(--cyan); background: rgba(9,30,54,.38); font: 800 10px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 7px rgba(112,230,255,.08), 0 0 16px rgba(112,230,255,.7); }
-.hero-name { margin: 22px 0 0; font-size: clamp(52px, 6vw, 86px); line-height: .96; letter-spacing: -.06em; font-weight: 870; }
+.hero-name { margin: 22px 0 0; font-size: clamp(46px, 5.2vw, 72px); line-height: .98; letter-spacing: -.055em; font-weight: 850; }
 .hero-name span { display: block; }
 .hero-tagline { max-width: 760px; margin: 20px 0 0; font-size: clamp(27px, 3vw, 46px); line-height: 1.13; letter-spacing: -.045em; font-weight: 830; color: transparent; background: linear-gradient(92deg, #fff 0%, #acd9ff 44%, var(--cyan) 100%); -webkit-background-clip: text; background-clip: text; }
 .hero-copy { max-width: 720px; margin: 24px 0 0; color: var(--muted-strong); font-size: clamp(16px, 1.25vw, 18px); line-height: 1.92; }
@@ -297,7 +297,7 @@ footer { padding: 36px 0 44px; }
   .nav { min-height: var(--header); gap: 12px; }
   .nav-links { inset: var(--header) 13px auto; }
   .page-hero { padding-top: calc(var(--header) + 56px); }
-  .hero-name { font-size: clamp(44px,13vw,62px); }
+  .hero-name { font-size: clamp(39px,11.5vw,54px); }
   .hero-tagline { font-size: clamp(24px,8vw,36px); }
   .hero-actions { flex-direction: column; }
   .button { width: 100%; }
@@ -376,8 +376,9 @@ body { font-size: 16px; }
 .footer-row { font-size: 13px; }
 
 .venn-copy { pointer-events: none; }
-[data-lang="en"] .venn-copy.zh { display: none !important; }
-[data-lang="zh"] .venn-copy.en { display: none !important; }
+[data-venn-lang] { transition: opacity .16s ease; }
+[data-lang="zh"] [data-venn-lang="en"],
+[data-lang="en"] [data-venn-lang="zh"] { display: none !important; }
 
 @media (max-width: 700px) {
   .node { min-width: 80px; padding: 9px; font-size: 10px; }

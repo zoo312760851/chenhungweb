@@ -13,13 +13,28 @@ const readLanguage = () => {
 const saveLanguage = (lang) => {
   try { localStorage.setItem('portfolio-language', lang); } catch {}
 };
+const syncVennLanguage = (lang) => {
+  document.querySelectorAll('[data-venn-lang]').forEach(group => {
+    const active = group.dataset.vennLang === lang;
+    group.style.setProperty('display', active ? 'inline' : 'none', 'important');
+    group.setAttribute('aria-hidden', String(!active));
+  });
+  document.querySelectorAll('[data-aria-zh][data-aria-en]').forEach(element => {
+    element.setAttribute('aria-label', lang === 'zh' ? element.dataset.ariaZh : element.dataset.ariaEn);
+  });
+};
 const setLanguage = (lang) => {
   root.dataset.lang = lang;
   root.lang = lang === 'zh' ? 'zh-Hant' : 'en';
   if (langToggle) langToggle.textContent = lang === 'zh' ? 'EN' : '中';
+  syncVennLanguage(lang);
   saveLanguage(lang);
 };
-setLanguage(readLanguage() === 'en' ? 'en' : 'zh');
+const queryLanguage = new URLSearchParams(location.search).get('lang');
+const initialLanguage = queryLanguage === 'en' || queryLanguage === 'zh'
+  ? queryLanguage
+  : (readLanguage() === 'en' ? 'en' : 'zh');
+setLanguage(initialLanguage);
 if (langToggle) langToggle.addEventListener('click', () => setLanguage(root.dataset.lang === 'zh' ? 'en' : 'zh'));
 
 if (navToggle && navLinks) {
