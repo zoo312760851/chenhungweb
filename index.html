@@ -3,34 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chen-Hung Tsao — III–V semiconductor research, diffraction analysis, and scientific computing.">
-  <meta name="theme-color" content="#070b12">
-  <meta property="og:title" content="Chen-Hung Tsao | Semiconductor Research">
-  <meta property="og:description" content="III–V semiconductors, diffraction analysis, crystal modeling, and scientific computing.">
+  <meta name="description" content="Chen-Hung Tsao — Mechanical engineering, electronics, nanotechnology, precision systems, and scientific computing.">
+  <meta name="theme-color" content="#030914">
+  <meta property="og:title" content="Chen-Hung Tsao | Engineering Portfolio">
+  <meta property="og:description" content="Mechanical engineering × electronics × nanotechnology. Experience, achievements, credentials, and selected engineering work.">
   <meta property="og:type" content="website">
-  <title>Chen-Hung Tsao | Semiconductor Research</title>
+  <title>Chen-Hung Tsao | Engineering Portfolio</title>
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23070b12'/%3E%3Cpath d='M18 19h28v7H35v22h-7V26H18z' fill='%237cf7cf'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%231d8fff'/%3E%3Cstop offset='1' stop-color='%2369e2ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='%23030914'/%3E%3Cpath d='M17 19h30v8H36v22h-8V27H17z' fill='url(%23g)'/%3E%3C/svg%3E">
   <style>
     :root {
       color-scheme: dark;
-      --bg: #070b12;
-      --bg-soft: #0b111b;
-      --panel: rgba(14, 22, 34, .78);
-      --panel-solid: #0e1622;
-      --line: rgba(178, 207, 231, .14);
-      --line-strong: rgba(178, 207, 231, .24);
-      --text: #f4f8fb;
-      --muted: #99aabd;
-      --muted-strong: #c5d2de;
-      --accent: #7cf7cf;
-      --accent-2: #7cb8ff;
-      --accent-3: #b68cff;
-      --danger: #ff7a90;
-      --shadow: 0 28px 90px rgba(0,0,0,.42);
+      --bg: #030914;
+      --bg-soft: #06101f;
+      --panel: rgba(8, 24, 45, .78);
+      --panel-solid: #08182d;
+      --panel-2: #0b2039;
+      --line: rgba(126, 185, 236, .16);
+      --line-strong: rgba(126, 185, 236, .30);
+      --text: #f4f8ff;
+      --muted: #8fa7c0;
+      --muted-strong: #c2d0df;
+      --blue: #1d8fff;
+      --cyan: #69e2ff;
+      --ice: #b8efff;
+      --navy: #061426;
+      --success: #73f3c0;
+      --shadow: 0 30px 90px rgba(0, 0, 0, .48);
       --radius-xl: 30px;
       --radius-lg: 22px;
-      --radius-md: 16px;
+      --radius-md: 15px;
       --shell: min(1180px, calc(100% - 40px));
     }
 
@@ -41,9 +43,9 @@
       min-width: 320px;
       color: var(--text);
       background:
-        radial-gradient(circle at 78% 7%, rgba(124,184,255,.12), transparent 29%),
-        radial-gradient(circle at 18% 18%, rgba(124,247,207,.08), transparent 26%),
-        var(--bg);
+        radial-gradient(circle at 86% 5%, rgba(29,143,255,.18), transparent 28%),
+        radial-gradient(circle at 12% 19%, rgba(105,226,255,.08), transparent 25%),
+        linear-gradient(180deg, #030914 0%, #04101d 42%, #030914 100%);
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -52,21 +54,36 @@
       content: "";
       position: fixed;
       inset: 0;
+      z-index: -2;
       pointer-events: none;
-      opacity: .16;
+      opacity: .22;
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 64px 64px;
-      mask-image: linear-gradient(to bottom, #000, transparent 75%);
-      z-index: -1;
+        linear-gradient(rgba(90,176,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(90,176,255,.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, #000, transparent 78%);
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      width: 480px;
+      height: 480px;
+      right: -220px;
+      top: 42%;
+      z-index: -2;
+      border-radius: 50%;
+      pointer-events: none;
+      background: rgba(29,143,255,.08);
+      filter: blur(90px);
     }
     a { color: inherit; text-decoration: none; }
     button, a { -webkit-tap-highlight-color: transparent; }
     button { font: inherit; }
     img, svg { display: block; max-width: 100%; }
-    ::selection { color: #07110e; background: var(--accent); }
+    ::selection { color: #00111d; background: var(--cyan); }
 
+    .shell { width: var(--shell); margin-inline: auto; }
+    .section { padding: 106px 0; }
     .skip-link {
       position: fixed;
       left: 18px;
@@ -74,13 +91,11 @@
       z-index: 999;
       padding: 12px 16px;
       border-radius: 10px;
-      color: #07110e;
-      background: var(--accent);
+      color: #00111d;
+      background: var(--cyan);
       transition: top .2s ease;
     }
     .skip-link:focus { top: 18px; }
-    .shell { width: var(--shell); margin-inline: auto; }
-    .section { padding: 108px 0; }
 
     .site-header {
       position: fixed;
@@ -90,7 +105,7 @@
       transition: background .25s ease, border-color .25s ease, backdrop-filter .25s ease;
     }
     .site-header.scrolled {
-      background: rgba(7,11,18,.78);
+      background: rgba(3,9,20,.78);
       border-color: var(--line);
       backdrop-filter: blur(18px);
     }
@@ -103,23 +118,34 @@
     }
     .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .04em; }
     .brand-mark {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
       border: 1px solid var(--line-strong);
-      border-radius: 11px;
-      color: var(--accent);
-      background: linear-gradient(145deg, rgba(124,247,207,.09), rgba(124,184,255,.04));
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+      border-radius: 12px;
+      color: var(--cyan);
+      background: linear-gradient(145deg, rgba(29,143,255,.18), rgba(105,226,255,.05));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 12px 30px rgba(0,0,0,.2);
       font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
     .brand-copy { display: grid; gap: 2px; }
     .brand-name { font-size: 13px; }
-    .brand-role { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .14em; }
-    .nav-links { justify-self: center; display: flex; gap: 30px; }
-    .nav-links a { color: var(--muted-strong); font-size: 13px; font-weight: 700; transition: color .2s ease; }
-    .nav-links a:hover { color: var(--accent); }
+    .brand-role { color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .14em; }
+    .nav-links { justify-self: center; display: flex; gap: 28px; }
+    .nav-links a { position: relative; color: var(--muted-strong); font-size: 13px; font-weight: 750; transition: color .2s ease; }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -9px;
+      height: 1px;
+      background: var(--cyan);
+      transition: right .2s ease;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-links a:hover::after { right: 0; }
     .nav-actions { display: flex; align-items: center; gap: 10px; }
     .lang-toggle, .nav-toggle {
       border: 1px solid var(--line-strong);
@@ -128,24 +154,27 @@
       cursor: pointer;
     }
     .lang-toggle {
-      min-width: 44px;
-      height: 38px;
-      border-radius: 11px;
+      min-width: 46px;
+      height: 40px;
+      border-radius: 12px;
       font-weight: 800;
       font-size: 12px;
     }
-    .lang-toggle:hover { color: var(--accent); border-color: rgba(124,247,207,.45); }
-    .nav-toggle { display: none; width: 40px; height: 38px; border-radius: 11px; padding: 0; place-items: center; }
-    .nav-toggle span { width: 17px; height: 1px; background: currentColor; transition: transform .2s ease; }
+    .lang-toggle:hover { color: var(--cyan); border-color: rgba(105,226,255,.55); }
+    .nav-toggle { display: none; width: 42px; height: 40px; border-radius: 12px; padding: 0; place-items: center; }
+    .nav-toggle span,
+    .nav-toggle::before,
+    .nav-toggle::after { content: ""; width: 17px; height: 1px; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+    .nav-toggle { gap: 4px; }
 
     .hero {
       min-height: 100svh;
       padding-top: 138px;
-      padding-bottom: 76px;
+      padding-bottom: 78px;
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr);
+      grid-template-columns: minmax(0, 1.05fr) minmax(390px, .95fr);
       align-items: center;
-      gap: 74px;
+      gap: 72px;
     }
     .eyebrow {
       width: fit-content;
@@ -153,34 +182,44 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 24px;
-      color: var(--accent);
+      color: var(--cyan);
       font: 800 11px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       letter-spacing: .14em;
       text-transform: uppercase;
     }
-    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 7px rgba(124,247,207,.09), 0 0 26px rgba(124,247,207,.7); }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 7px rgba(105,226,255,.09), 0 0 25px rgba(105,226,255,.7); }
     .hero h1 {
       max-width: 760px;
       margin: 0;
-      font-size: clamp(52px, 7.2vw, 96px);
-      line-height: .98;
-      letter-spacing: -.065em;
-      font-weight: 850;
+      font-size: clamp(50px, 6.8vw, 90px);
+      line-height: 1.01;
+      letter-spacing: -.058em;
+      font-weight: 860;
     }
     .hero h1 span { display: block; }
-    .hero h1 .line-two {
-      margin-top: 8px;
+    .hero h1 .accent {
+      margin-top: 10px;
       color: transparent;
-      background: linear-gradient(90deg, #fff 0%, var(--accent) 45%, var(--accent-2) 100%);
+      background: linear-gradient(92deg, #fff 0%, #8ecbff 38%, var(--cyan) 100%);
       -webkit-background-clip: text;
       background-clip: text;
     }
     .hero-lead {
-      max-width: 650px;
+      max-width: 670px;
       margin: 30px 0 0;
       color: var(--muted-strong);
-      font-size: clamp(17px, 1.55vw, 21px);
-      line-height: 1.8;
+      font-size: clamp(17px, 1.45vw, 20px);
+      line-height: 1.82;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+    .hero-tags span {
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #cce4f7;
+      background: rgba(13,41,71,.48);
+      font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: .04em;
     }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
     .button {
@@ -194,494 +233,756 @@
       border-radius: 14px;
       font-size: 14px;
       font-weight: 800;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
     }
     .button:hover { transform: translateY(-2px); }
-    .button-primary { color: #07110e; border-color: transparent; background: var(--accent); box-shadow: 0 14px 40px rgba(124,247,207,.16); }
-    .button-primary:hover { background: #9affdc; }
-    .button-secondary { color: var(--text); background: rgba(255,255,255,.025); }
-    .button-secondary:hover { border-color: rgba(124,184,255,.5); }
-    .button svg { width: 16px; height: 16px; }
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      margin-top: 48px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: var(--line);
+    .button-primary {
+      color: #00111d;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      box-shadow: 0 16px 45px rgba(29,143,255,.22);
     }
-    .hero-meta div { min-width: 0; padding: 17px 18px; background: rgba(8,13,21,.88); }
-    .hero-meta small { display: block; color: var(--muted); font: 750 9px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .13em; }
-    .hero-meta strong { display: block; margin-top: 7px; overflow: hidden; color: var(--text); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+    .button-primary:hover { box-shadow: 0 20px 55px rgba(29,143,255,.35); }
+    .button-secondary { color: var(--text); background: rgba(255,255,255,.025); }
+    .button-secondary:hover { border-color: rgba(105,226,255,.55); }
+    .button svg { width: 16px; height: 16px; }
 
-    .research-console {
+    .hero-visual {
       position: relative;
-      isolation: isolate;
-      min-height: 530px;
-      padding: 18px;
+      min-height: 570px;
+      display: grid;
+      place-items: center;
+    }
+    .visual-card {
+      position: relative;
+      width: min(100%, 510px);
+      min-height: 525px;
+      padding: 22px;
       border: 1px solid var(--line-strong);
       border-radius: var(--radius-xl);
-      background: linear-gradient(155deg, rgba(18,29,44,.9), rgba(8,13,21,.96));
+      background: linear-gradient(150deg, rgba(11,35,64,.92), rgba(4,14,28,.96));
       box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.05);
       overflow: hidden;
+      isolation: isolate;
     }
-    .research-console::before {
+    .visual-card::before {
       content: "";
       position: absolute;
-      width: 320px;
-      height: 320px;
+      width: 330px;
+      height: 330px;
       right: -150px;
       top: -150px;
       z-index: -1;
       border-radius: 50%;
-      background: rgba(124,184,255,.2);
-      filter: blur(70px);
+      background: rgba(29,143,255,.23);
+      filter: blur(75px);
     }
-    .console-bar { display: flex; align-items: center; justify-content: space-between; padding: 4px 5px 16px; color: var(--muted); font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .08em; }
-    .console-dots { display: flex; gap: 6px; }
-    .console-dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--line-strong); }
-    .console-dots i:nth-child(1) { background: var(--danger); }
-    .console-dots i:nth-child(2) { background: #ffd36f; }
-    .console-dots i:nth-child(3) { background: var(--accent); }
-    .console-live { color: var(--accent); }
-    .console-canvas {
+    .visual-top { display: flex; align-items: center; justify-content: space-between; color: var(--muted); font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .08em; }
+    .visual-live { display: inline-flex; align-items: center; gap: 7px; color: var(--cyan); }
+    .visual-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 16px var(--cyan); }
+    .system-map {
       position: relative;
-      height: 315px;
+      height: 330px;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background:
+        linear-gradient(rgba(105,226,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(105,226,255,.045) 1px, transparent 1px),
+        rgba(2,10,22,.63);
+      background-size: 34px 34px;
+      overflow: hidden;
+    }
+    .wafer {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 215px;
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(105,226,255,.42);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 40% 35%, rgba(105,226,255,.16), transparent 22%),
+        repeating-linear-gradient(0deg, rgba(105,226,255,.10) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(90deg, rgba(105,226,255,.10) 0 1px, transparent 1px 18px),
+        linear-gradient(145deg, rgba(29,143,255,.13), rgba(6,20,38,.62));
+      box-shadow: 0 0 65px rgba(29,143,255,.16), inset 0 0 55px rgba(105,226,255,.04);
+    }
+    .wafer::before,
+    .wafer::after { content: ""; position: absolute; inset: 24px; border: 1px solid rgba(105,226,255,.16); border-radius: 50%; }
+    .wafer::after { inset: 58px; border-color: rgba(105,226,255,.24); }
+    .wafer-core {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 96px;
+      height: 96px;
+      display: grid;
+      place-items: center;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(105,226,255,.38);
+      border-radius: 24px;
+      background: rgba(4,16,31,.9);
+      box-shadow: inset 0 0 24px rgba(29,143,255,.14), 0 0 34px rgba(29,143,255,.16);
+      color: var(--ice);
+      font: 850 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-align: center;
+      letter-spacing: .08em;
+    }
+    .orbit { position: absolute; inset: 28px; border: 1px dashed rgba(105,226,255,.18); border-radius: 50%; animation: spin 22s linear infinite; }
+    .orbit::before,
+    .orbit::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 18px rgba(105,226,255,.8); }
+    .orbit::before { left: 34px; top: 9px; }
+    .orbit::after { right: 12px; bottom: 43px; background: var(--blue); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .map-node {
+      position: absolute;
+      min-width: 86px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--muted-strong);
+      background: rgba(6,21,39,.88);
+      font: 750 9px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+    .map-node strong { display: block; margin-bottom: 2px; color: var(--cyan); font-size: 10px; }
+    .node-a { left: 17px; top: 30px; }
+    .node-b { right: 18px; top: 43px; }
+    .node-c { left: 24px; bottom: 32px; }
+    .node-d { right: 25px; bottom: 28px; }
+    .visual-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+    .metric {
+      min-width: 0;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(5,19,36,.72);
+    }
+    .metric small { color: var(--muted); font: 750 8px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .1em; }
+    .metric strong { display: block; margin-top: 7px; color: var(--text); font-size: 17px; letter-spacing: -.03em; }
+    .metric span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; }
+
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--line);
+      box-shadow: 0 16px 45px rgba(0,0,0,.16);
+    }
+    .stat { min-width: 0; padding: 26px 24px; background: rgba(5,17,32,.92); }
+    .stat strong { display: block; color: var(--cyan); font-size: clamp(23px, 3vw, 34px); letter-spacing: -.04em; }
+    .stat span { display: block; margin-top: 8px; color: var(--muted-strong); font-size: 12px; line-height: 1.5; }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(320px, 1.2fr);
+      align-items: end;
+      gap: 70px;
+      margin-bottom: 48px;
+    }
+    .kicker { color: var(--cyan); font: 800 10px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; }
+    .section-heading h2 { margin: 12px 0 0; font-size: clamp(34px, 4.8vw, 61px); line-height: 1.08; letter-spacing: -.048em; }
+    .section-heading p { margin: 0; color: var(--muted-strong); font-size: 16px; line-height: 1.86; }
+
+    .timeline { position: relative; display: grid; gap: 16px; }
+    .timeline::before { content: ""; position: absolute; left: 104px; top: 20px; bottom: 20px; width: 1px; background: linear-gradient(var(--cyan), rgba(105,226,255,.07)); }
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 82px minmax(0, 1fr);
+      gap: 42px;
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-radius: 21px;
+      background: linear-gradient(135deg, rgba(8,26,48,.78), rgba(4,15,29,.75));
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .timeline-item:hover { transform: translateY(-3px); border-color: rgba(105,226,255,.34); background: linear-gradient(135deg, rgba(11,37,66,.85), rgba(5,18,34,.82)); }
+    .timeline-item::before { content: ""; position: absolute; left: 99px; top: 31px; width: 11px; height: 11px; border: 3px solid var(--bg); border-radius: 50%; background: var(--cyan); box-shadow: 0 0 18px rgba(105,226,255,.45); }
+    .timeline-year { color: var(--cyan); font: 800 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .timeline-content h3 { margin: 0; font-size: 21px; letter-spacing: -.02em; }
+    .timeline-content .org { margin-top: 6px; color: #8ecbff; font-size: 13px; font-weight: 750; }
+    .timeline-content p { margin: 12px 0 0; color: var(--muted-strong); font-size: 14px; line-height: 1.78; }
+    .timeline-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .timeline-tags span { padding: 6px 9px; border-radius: 999px; color: var(--muted-strong); background: rgba(29,143,255,.09); border: 1px solid rgba(105,226,255,.12); font: 750 9px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    .achievement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .achievement-card {
+      position: relative;
+      min-height: 245px;
       padding: 24px;
       border: 1px solid var(--line);
-      border-radius: 20px;
-      background:
-        linear-gradient(rgba(124,184,255,.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124,184,255,.045) 1px, transparent 1px),
-        rgba(4,8,14,.76);
-      background-size: 36px 36px;
+      border-radius: 22px;
+      background: linear-gradient(148deg, rgba(10,31,57,.83), rgba(4,15,29,.78));
       overflow: hidden;
+      transition: transform .22s ease, border-color .22s ease;
     }
-    .console-canvas::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, transparent, rgba(124,247,207,.035), transparent); transform: translateX(-100%); animation: scan 5.5s linear infinite; }
-    @keyframes scan { to { transform: translateX(100%); } }
-    .chart-label { position: absolute; z-index: 2; color: var(--muted); font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .09em; }
-    .chart-label.y { top: 18px; left: 20px; }
-    .chart-label.x { right: 18px; bottom: 16px; }
-    .diffraction-chart { width: 100%; height: 100%; overflow: visible; }
-    .diffraction-chart .grid { stroke: rgba(177,209,235,.08); stroke-width: 1; }
-    .diffraction-chart .area { fill: url(#areaGradient); opacity: .62; }
-    .diffraction-chart .curve { fill: none; stroke: url(#lineGradient); stroke-width: 3; stroke-linecap: round; filter: drop-shadow(0 0 10px rgba(124,247,207,.32)); stroke-dasharray: 520; stroke-dashoffset: 520; animation: draw 2.3s ease .3s forwards; }
-    .diffraction-chart .guide { stroke: rgba(255,255,255,.22); stroke-width: 1; stroke-dasharray: 4 6; }
-    .diffraction-chart .point { fill: var(--accent); filter: drop-shadow(0 0 8px rgba(124,247,207,.85)); }
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-    .console-readout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
-    .readout-card { padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.022); }
-    .readout-card span { display: block; color: var(--muted); font: 700 9px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .09em; }
-    .readout-card strong { display: block; margin-top: 7px; font-size: 13px; }
-    .readout-card strong.ok { color: var(--accent); }
-    .console-log { margin-top: 12px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 15px; color: var(--muted-strong); background: rgba(4,8,14,.6); font: 650 11px/1.8 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .console-log b { color: var(--accent); font-weight: 800; }
-    .console-log .typing::after { content: "▋"; color: var(--accent); animation: blink .85s steps(1) infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-
-    .signal-strip { border-block: 1px solid var(--line); background: rgba(255,255,255,.015); overflow: hidden; }
-    .signal-track { width: max-content; display: flex; align-items: center; gap: 28px; padding: 16px 0; color: var(--muted); font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .13em; animation: ticker 25s linear infinite; }
-    .signal-track i { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
-    @keyframes ticker { to { transform: translateX(-50%); } }
-
-    .section-heading { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 24px; align-items: start; margin-bottom: 48px; }
-    .section-index { padding-top: 7px; color: var(--accent); font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; }
-    .section-kicker { margin: 0 0 12px; color: var(--muted); font: 800 10px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .14em; }
-    .section-heading h2 { max-width: 760px; margin: 0; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.08; letter-spacing: -.045em; }
-
-    .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .focus-card {
-      min-height: 310px;
-      padding: 28px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, rgba(16,25,39,.88), rgba(9,14,23,.88));
-      transition: transform .25s ease, border-color .25s ease;
-    }
-    .focus-card:hover { transform: translateY(-6px); border-color: rgba(124,247,207,.32); }
-    .focus-icon { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 54px; border: 1px solid var(--line-strong); border-radius: 14px; color: var(--accent); background: rgba(124,247,207,.05); }
-    .focus-icon svg { width: 22px; height: 22px; }
-    .focus-card .number { color: var(--muted); font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; }
-    .focus-card h3 { margin: 13px 0 12px; font-size: 21px; letter-spacing: -.02em; }
-    .focus-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
-
-    .project-feature {
+    .achievement-card:hover { transform: translateY(-5px); border-color: rgba(105,226,255,.4); }
+    .achievement-card::after { content: ""; position: absolute; right: -45px; bottom: -45px; width: 120px; height: 120px; border-radius: 50%; border: 1px solid rgba(105,226,255,.10); box-shadow: 0 0 0 18px rgba(105,226,255,.025), 0 0 0 38px rgba(105,226,255,.018); }
+    .achievement-icon {
+      width: 44px;
+      height: 44px;
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      min-height: 540px;
-      overflow: hidden;
+      place-items: center;
       border: 1px solid var(--line-strong);
-      border-radius: var(--radius-xl);
-      background: linear-gradient(145deg, rgba(16,25,39,.92), rgba(8,13,21,.94));
-      box-shadow: 0 24px 80px rgba(0,0,0,.24);
+      border-radius: 14px;
+      color: var(--cyan);
+      background: rgba(29,143,255,.10);
     }
-    .project-copy { padding: 52px; display: flex; flex-direction: column; }
-    .project-topline { display: flex; justify-content: space-between; gap: 14px; color: var(--muted); font: 800 10px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; }
-    .project-copy h3 { max-width: 630px; margin: auto 0 20px; font-size: clamp(31px, 4vw, 52px); line-height: 1.05; letter-spacing: -.045em; }
-    .project-copy p { max-width: 620px; margin: 0; color: var(--muted-strong); font-size: 16px; line-height: 1.8; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-    .tag-list span { padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted-strong); background: rgba(255,255,255,.02); font-size: 11px; font-weight: 750; }
-    .project-visual { position: relative; min-height: 420px; border-left: 1px solid var(--line); background: radial-gradient(circle at 50% 50%, rgba(124,184,255,.12), transparent 45%), #080d15; overflow: hidden; }
-    .project-visual::before { content: ""; position: absolute; inset: 0; opacity: .42; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 42px 42px; }
-    .lattice { position: absolute; inset: 50%; width: 360px; height: 360px; transform: translate(-50%, -50%) rotateX(60deg) rotateZ(45deg); transform-style: preserve-3d; }
-    .lattice-plane { position: absolute; inset: 32px; border: 1px solid rgba(124,247,207,.35); background-image: radial-gradient(circle, var(--accent) 0 2px, transparent 3px); background-size: 36px 36px; box-shadow: 0 0 55px rgba(124,247,207,.08); }
-    .lattice-plane:nth-child(2) { transform: translateZ(45px); border-color: rgba(124,184,255,.4); background-image: radial-gradient(circle, var(--accent-2) 0 2px, transparent 3px); }
-    .lattice-plane:nth-child(3) { transform: translateZ(90px); border-color: rgba(182,140,255,.38); background-image: radial-gradient(circle, var(--accent-3) 0 2px, transparent 3px); }
-    .axis-label { position: absolute; color: var(--muted); font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .08em; }
-    .axis-label.one { left: 24px; bottom: 22px; }
-    .axis-label.two { right: 24px; top: 22px; color: var(--accent); }
+    .achievement-icon svg { width: 21px; height: 21px; }
+    .achievement-card .type { margin-top: 24px; color: var(--cyan); font: 800 9px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .achievement-card h3 { margin: 9px 0 0; max-width: 290px; font-size: 19px; line-height: 1.42; letter-spacing: -.018em; }
+    .achievement-card p { margin: 11px 0 0; max-width: 310px; color: var(--muted); font-size: 13px; line-height: 1.72; }
 
-    .method-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 18px; }
-    .method-panel { padding: 34px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(13,20,31,.74); }
-    .method-panel h3 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.02em; }
-    .method-panel > p { margin: 0; color: var(--muted); line-height: 1.75; }
-    .workflow { display: grid; gap: 1px; margin-top: 28px; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: var(--line); }
-    .workflow-item { display: grid; grid-template-columns: 38px 1fr; gap: 12px; padding: 16px; background: #0b121d; }
-    .workflow-item span { color: var(--accent); font: 800 10px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .workflow-item strong { display: block; font-size: 13px; }
-    .workflow-item small { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-    .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 28px; }
-    .skill { min-height: 104px; padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.02); }
-    .skill b { display: block; font-size: 13px; }
-    .skill span { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
-    .skill-meter { height: 2px; margin-top: 15px; background: rgba(255,255,255,.06); overflow: hidden; }
-    .skill-meter i { display: block; width: var(--width); height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+    .project-panel {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .project-story,
+    .project-data {
+      min-height: 430px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: linear-gradient(145deg, rgba(9,29,53,.82), rgba(4,15,29,.78));
+    }
+    .project-story { padding: 34px; }
+    .project-story .label { color: var(--cyan); font: 800 9px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .13em; }
+    .project-story h3 { margin: 14px 0 0; max-width: 520px; font-size: clamp(28px, 3.3vw, 45px); line-height: 1.18; letter-spacing: -.04em; }
+    .project-story > p { margin: 22px 0 0; color: var(--muted-strong); font-size: 15px; line-height: 1.86; }
+    .project-list { display: grid; gap: 12px; margin-top: 26px; }
+    .project-list div { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; color: var(--muted-strong); font-size: 13px; line-height: 1.68; }
+    .project-list b { width: 25px; height: 25px; display: grid; place-items: center; border: 1px solid rgba(105,226,255,.24); border-radius: 8px; color: var(--cyan); background: rgba(29,143,255,.08); font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .project-data { position: relative; padding: 26px; overflow: hidden; }
+    .project-data::before { content: ""; position: absolute; inset: 0; opacity: .5; background-image: linear-gradient(rgba(105,226,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(105,226,255,.035) 1px, transparent 1px); background-size: 42px 42px; }
+    .data-top { position: relative; display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+    .data-top span { color: var(--muted); font: 750 9px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .09em; }
+    .data-top strong { color: var(--cyan); font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .data-grid { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+    .data-card { min-height: 126px; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(4,17,33,.78); }
+    .data-card small { color: var(--muted); font: 750 9px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .09em; }
+    .data-card strong { display: block; margin-top: 10px; color: var(--text); font-size: 30px; letter-spacing: -.045em; }
+    .data-card em { display: block; margin-top: 6px; color: #8ecbff; font-size: 11px; font-style: normal; }
+    .signal-chart { position: relative; height: 145px; margin-top: 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(2,11,23,.70); overflow: hidden; }
+    .signal-chart svg { width: 100%; height: 100%; }
+    .signal-chart .axis { stroke: rgba(143,167,192,.22); stroke-width: 1; }
+    .signal-chart .line { fill: none; stroke: url(#chartGradient); stroke-width: 3; stroke-linecap: round; filter: drop-shadow(0 0 8px rgba(105,226,255,.45)); }
+    .signal-chart .point { fill: var(--cyan); }
 
-    .contact-card {
+    .skills-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 42px; }
+    .skills-copy { position: sticky; top: 118px; height: fit-content; }
+    .skills-copy h3 { margin: 13px 0 0; font-size: clamp(32px, 4vw, 51px); line-height: 1.12; letter-spacing: -.045em; }
+    .skills-copy p { margin: 20px 0 0; color: var(--muted-strong); font-size: 15px; line-height: 1.85; }
+    .skill-groups { display: grid; gap: 13px; }
+    .skill-group { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: rgba(7,23,43,.74); }
+    .skill-group h4 { margin: 0; color: var(--cyan); font: 800 10px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; }
+    .skill-group p { margin: 13px 0 0; color: var(--muted-strong); font-size: 14px; line-height: 1.75; }
+    .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .skill-chips span { padding: 8px 10px; border: 1px solid rgba(105,226,255,.13); border-radius: 10px; color: #c8d8e8; background: rgba(29,143,255,.07); font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    .about-card {
       position: relative;
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 62px;
+      padding: 46px;
+      border: 1px solid var(--line-strong);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(11,36,65,.88), rgba(4,15,29,.88));
       overflow: hidden;
-      padding: clamp(36px, 6vw, 76px);
-      border: 1px solid rgba(124,247,207,.24);
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, rgba(124,247,207,.09), rgba(124,184,255,.07) 48%, rgba(182,140,255,.05));
+      box-shadow: 0 22px 70px rgba(0,0,0,.22);
     }
-    .contact-card::after { content: ""; position: absolute; width: 320px; height: 320px; right: -130px; bottom: -170px; border: 1px solid rgba(124,247,207,.3); border-radius: 50%; box-shadow: 0 0 0 55px rgba(124,247,207,.035), 0 0 0 110px rgba(124,184,255,.025); }
-    .contact-card > * { position: relative; z-index: 1; }
-    .contact-card .section-kicker { color: var(--accent); }
-    .contact-card h2 { max-width: 790px; margin: 0; font-size: clamp(38px, 5.8vw, 72px); line-height: 1.02; letter-spacing: -.055em; }
-    .contact-card p { max-width: 650px; margin: 24px 0 0; color: var(--muted-strong); font-size: 16px; line-height: 1.8; }
-    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .about-card::after { content: ""; position: absolute; width: 310px; height: 310px; right: -160px; bottom: -175px; border-radius: 50%; border: 1px solid rgba(105,226,255,.12); box-shadow: 0 0 0 38px rgba(105,226,255,.025), 0 0 0 80px rgba(105,226,255,.015); }
+    .quote-mark { color: var(--cyan); font: 900 100px/.75 Georgia, serif; opacity: .65; }
+    .about-intro h3 { margin: 20px 0 0; font-size: clamp(29px, 3.6vw, 47px); line-height: 1.18; letter-spacing: -.04em; }
+    .about-body { position: relative; z-index: 1; }
+    .about-body p { margin: 0; color: var(--muted-strong); font-size: 16px; line-height: 1.96; }
+    .about-body p + p { margin-top: 20px; }
+    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
+    .principle { padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: rgba(4,17,33,.56); }
+    .principle strong { display: block; color: var(--cyan); font-size: 12px; }
+    .principle span { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; line-height: 1.5; }
 
-    footer { padding: 26px 0 38px; color: var(--muted); font-size: 12px; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 18px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .contact-panel {
+      position: relative;
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+      padding: 56px;
+      border: 1px solid var(--line-strong);
+      border-radius: 30px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(29,143,255,.17), transparent 38%),
+        linear-gradient(145deg, rgba(10,32,59,.90), rgba(4,15,29,.92));
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .contact-panel::before,
+    .contact-panel::after { content: ""; position: absolute; border-radius: 50%; border: 1px solid rgba(105,226,255,.10); }
+    .contact-panel::before { width: 440px; height: 440px; left: -260px; top: -250px; box-shadow: 0 0 0 55px rgba(105,226,255,.018), 0 0 0 112px rgba(105,226,255,.012); }
+    .contact-panel::after { width: 310px; height: 310px; right: -180px; bottom: -170px; box-shadow: 0 0 0 45px rgba(105,226,255,.018); }
+    .contact-inner { position: relative; z-index: 1; max-width: 760px; }
+    .contact-inner h2 { margin: 14px 0 0; font-size: clamp(36px, 5vw, 64px); line-height: 1.08; letter-spacing: -.052em; }
+    .contact-inner p { margin: 22px auto 0; max-width: 610px; color: var(--muted-strong); font-size: 16px; line-height: 1.85; }
+    .contact-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .contact-note { margin-top: 24px; color: var(--muted); font: 700 10px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .06em; }
 
-    [data-lang-block="en"] { display: none; }
-    html[data-lang="en"] [data-lang-block="zh"] { display: none; }
-    html[data-lang="en"] [data-lang-block="en"] { display: initial; }
-    html[data-lang="en"] span[data-lang-block="en"], html[data-lang="en"] strong[data-lang-block="en"] { display: inline; }
-    html[data-lang="en"] p[data-lang-block="en"], html[data-lang="en"] h1[data-lang-block="en"], html[data-lang="en"] h2[data-lang-block="en"], html[data-lang="en"] h3[data-lang-block="en"] { display: block; }
+    footer { padding: 34px 0 42px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--muted); font-size: 11px; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a:hover { color: var(--cyan); }
 
-    .reveal { opacity: 1; transform: none; }
-    .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s ease, transform .75s ease; }
+    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
     .js .reveal.visible { opacity: 1; transform: none; }
 
+    [data-lang="en"] .zh { display: none !important; }
+    [data-lang="zh"] .en { display: none !important; }
+
     @media (max-width: 980px) {
-      :root { --shell: min(100% - 32px, 760px); }
-      .nav { grid-template-columns: auto auto; justify-content: space-between; }
       .nav-links {
-        position: absolute;
-        top: 68px;
-        left: 16px;
-        right: 16px;
+        position: fixed;
+        inset: 76px 20px auto;
         display: none;
-        padding: 14px;
+        padding: 18px;
         border: 1px solid var(--line-strong);
-        border-radius: 16px;
-        background: rgba(9,14,23,.96);
+        border-radius: 18px;
+        background: rgba(3,9,20,.96);
         backdrop-filter: blur(18px);
         box-shadow: var(--shadow);
       }
-      .nav-links.open { display: grid; gap: 4px; }
-      .nav-links a { padding: 13px 12px; border-radius: 10px; }
-      .nav-links a:hover { background: rgba(255,255,255,.04); }
-      .nav-actions { justify-self: end; }
+      .nav-links.open { display: grid; gap: 0; }
+      .nav-links a { padding: 13px 10px; }
+      .nav-links a::after { display: none; }
       .nav-toggle { display: grid; }
-      .hero { min-height: auto; grid-template-columns: 1fr; gap: 56px; padding-top: 145px; }
-      .research-console { min-height: auto; }
-      .focus-grid { grid-template-columns: 1fr; }
-      .focus-card { min-height: 240px; }
-      .focus-icon { margin-bottom: 36px; }
-      .project-feature { grid-template-columns: 1fr; }
-      .project-visual { min-height: 430px; border-left: 0; border-top: 1px solid var(--line); }
-      .method-grid { grid-template-columns: 1fr; }
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 150px; gap: 48px; }
+      .hero-visual { min-height: auto; }
+      .visual-card { min-height: 520px; }
+      .quick-stats { grid-template-columns: repeat(2, 1fr); }
+      .section-heading { grid-template-columns: 1fr; gap: 24px; }
+      .achievement-grid { grid-template-columns: repeat(2, 1fr); }
+      .project-panel { grid-template-columns: 1fr; }
+      .skills-layout { grid-template-columns: 1fr; }
+      .skills-copy { position: static; }
+      .about-card { grid-template-columns: 1fr; gap: 28px; }
     }
 
-    @media (max-width: 640px) {
-      :root { --shell: min(100% - 24px, 560px); }
-      .section { padding: 82px 0; }
+    @media (max-width: 680px) {
+      :root { --shell: min(100% - 26px, 1180px); }
+      .section { padding: 80px 0; }
       .brand-role { display: none; }
-      .brand-name { font-size: 12px; }
-      .hero { padding-top: 124px; padding-bottom: 58px; }
-      .hero h1 { font-size: clamp(44px, 14vw, 64px); }
+      .nav { min-height: 68px; gap: 12px; }
+      .nav-links { inset: 68px 13px auto; }
+      .hero { padding-top: 122px; padding-bottom: 58px; }
+      .hero h1 { font-size: clamp(46px, 14.4vw, 68px); }
       .hero-lead { font-size: 16px; }
-      .hero-meta { grid-template-columns: 1fr; }
-      .research-console { padding: 12px; border-radius: 22px; }
-      .console-canvas { height: 265px; padding: 14px; }
-      .console-readout { grid-template-columns: 1fr; }
-      .section-heading { grid-template-columns: 1fr; gap: 12px; margin-bottom: 34px; }
-      .section-index { padding: 0; }
-      .focus-card { padding: 24px; }
-      .project-copy { padding: 30px 24px; }
-      .project-copy h3 { margin-top: 70px; }
-      .project-visual { min-height: 350px; }
-      .lattice { width: 280px; height: 280px; }
-      .method-panel { padding: 24px; }
-      .skills { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; }
+      .hero-actions { flex-direction: column; }
+      .button { width: 100%; }
+      .visual-card { min-height: 485px; padding: 16px; border-radius: 23px; }
+      .system-map { height: 300px; }
+      .wafer { width: 185px; }
+      .map-node { min-width: 75px; padding: 8px; font-size: 8px; }
+      .node-a { left: 9px; top: 24px; }
+      .node-b { right: 8px; top: 34px; }
+      .node-c { left: 10px; bottom: 27px; }
+      .node-d { right: 10px; bottom: 24px; }
+      .visual-metrics { grid-template-columns: 1fr; }
+      .metric { padding: 12px 14px; }
+      .metric span { display: none; }
+      .quick-stats { grid-template-columns: 1fr; }
+      .section-heading h2 { font-size: 37px; }
+      .timeline::before { display: none; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; padding: 22px; }
+      .timeline-item::before { display: none; }
+      .achievement-grid { grid-template-columns: 1fr; }
+      .achievement-card { min-height: 220px; }
+      .project-story { padding: 25px; }
+      .project-data { padding: 18px; }
+      .data-grid { grid-template-columns: 1fr; }
+      .skills-layout { gap: 28px; }
+      .skill-group { padding: 21px; }
+      .about-card { padding: 27px 23px; }
+      .about-body p { font-size: 15px; }
+      .principles { grid-template-columns: 1fr; }
+      .contact-panel { min-height: 430px; padding: 35px 22px; }
+      .contact-actions { flex-direction: column; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-      .js .reveal { opacity: 1; transform: none; }
+    }
+
+    @media print {
+      body { color: #0b1623; background: #fff; }
+      body::before, body::after, .site-header, .hero-visual, .contact-panel::before, .contact-panel::after { display: none !important; }
+      .section { padding: 36px 0; }
+      .hero { min-height: auto; padding: 30px 0; grid-template-columns: 1fr; }
+      .hero h1 .accent, .section-heading h2 { color: #0b1623; background: none; -webkit-text-fill-color: initial; }
+      .quick-stats, .timeline-item, .achievement-card, .project-story, .project-data, .skill-group, .about-card, .contact-panel { background: #fff; border-color: #cfd9e5; box-shadow: none; }
+      .hero-lead, .section-heading p, .timeline-content p, .achievement-card p, .project-story > p, .skill-group p, .about-body p, .contact-inner p { color: #34495e; }
+      .button { display: none; }
+      footer { display: none; }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳至主要內容</a>
+  <a class="skip-link" href="#main"><span class="zh">跳至主要內容</span><span class="en">Skip to content</span></a>
 
-  <header class="site-header" id="top">
-    <nav class="nav shell" aria-label="主要導覽">
-      <a class="brand" href="#top" aria-label="回到首頁">
+  <header class="site-header" id="siteHeader">
+    <div class="nav shell">
+      <a class="brand" href="#top" aria-label="Chen-Hung Tsao home">
         <span class="brand-mark">CT</span>
         <span class="brand-copy">
           <span class="brand-name">CHEN-HUNG TSAO</span>
-          <span class="brand-role">SEMICONDUCTOR RESEARCH</span>
+          <span class="brand-role">ENGINEERING PORTFOLIO</span>
         </span>
       </a>
 
-      <div class="nav-links" id="nav-links">
-        <a href="#focus"><span data-lang-block="zh">研究方向</span><span data-lang-block="en">Focus</span></a>
-        <a href="#work"><span data-lang-block="zh">精選專案</span><span data-lang-block="en">Work</span></a>
-        <a href="#methods"><span data-lang-block="zh">方法與工具</span><span data-lang-block="en">Methods</span></a>
-        <a href="#contact"><span data-lang-block="zh">聯絡</span><span data-lang-block="en">Contact</span></a>
-      </div>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#experience"><span class="zh">經歷</span><span class="en">Experience</span></a>
+        <a href="#achievements"><span class="zh">成就</span><span class="en">Achievements</span></a>
+        <a href="#project"><span class="zh">專案</span><span class="en">Project</span></a>
+        <a href="#skills"><span class="zh">能力</span><span class="en">Skills</span></a>
+        <a href="#about"><span class="zh">關於</span><span class="en">About</span></a>
+      </nav>
 
       <div class="nav-actions">
-        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="切換語言">EN</button>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="開啟導覽選單" aria-controls="nav-links" aria-expanded="false"><span></span><span></span></button>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero shell">
+    <section class="shell hero" id="top">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span><span>III–V SEMICONDUCTORS · DIFFRACTION · COMPUTATION</span></div>
-        <h1 data-lang-block="zh"><span>把材料訊號，</span><span class="line-two">變成工程證據。</span></h1>
-        <h1 data-lang-block="en"><span>Turn material signals</span><span class="line-two">into engineering evidence.</span></h1>
-        <p class="hero-lead" data-lang-block="zh">我是 Chen-Hung Tsao，聚焦於 GaAsBi/GaAs(111)B 外延薄膜、晶體取向與局部結構變形。透過 HRXRD、RSM、EBSD 與第一原理計算，建立可驗證的材料模型。</p>
-        <p class="hero-lead" data-lang-block="en">I am Chen-Hung Tsao, working on GaAsBi/GaAs(111)B epitaxy, crystal orientation, and local structural distortion. I connect HRXRD, RSM, EBSD, and first-principles modeling into testable material models.</p>
+        <div class="eyebrow"><span class="status-dot"></span><span class="zh">跨域工程 × 精密系統 × 半導體</span><span class="en">INTERDISCIPLINARY ENGINEERING</span></div>
+        <h1>
+          <span>Chen-Hung Tsao</span>
+          <span class="accent zh">讓跨域知識，成為可驗證的工程成果。</span>
+          <span class="accent en">Turning cross-domain knowledge into verifiable engineering outcomes.</span>
+        </h1>
+        <p class="hero-lead zh">以機械工程為核心，整合電子、控制、程式與奈米科技。擅長把抽象問題拆解為可設計、可量測、可迭代的系統。</p>
+        <p class="hero-lead en">Mechanical engineering at the core, integrated with electronics, control, programming, and nanotechnology. I turn abstract problems into systems that can be designed, measured, and iterated.</p>
+        <div class="hero-tags" aria-label="Focus areas">
+          <span>MECHANICAL DESIGN</span><span>FPGA / VERILOG</span><span>CAD / FEA</span><span>SEMICONDUCTOR</span><span>SCIENTIFIC COMPUTING</span>
+        </div>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work"><span data-lang-block="zh">查看研究專案</span><span data-lang-block="en">View research</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a class="button button-secondary" href="https://github.com/zoo312760851" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
-        <div class="hero-meta" aria-label="研究摘要">
-          <div><small>FOCUS</small><strong>GaAsBi / GaAs(111)B</strong></div>
-          <div><small>MEASURE</small><strong>HRXRD · RSM · EBSD</strong></div>
-          <div><small>MODEL</small><strong>CASTEP · Python</strong></div>
+          <a class="button button-primary" href="#achievements">
+            <span class="zh">查看成就與履歷</span><span class="en">View achievements</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="button button-secondary" href="mailto:zoo312760851@gmail.com">
+            <span class="zh">聯絡我</span><span class="en">Contact me</span>
+          </a>
         </div>
       </div>
 
-      <div class="research-console reveal" aria-label="研究分析視覺化">
-        <div class="console-bar"><span class="console-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>reciprocal-space / analysis</span><span class="console-live">● LIVE</span></div>
-        <div class="console-canvas">
-          <span class="chart-label y">INTENSITY / A.U.</span>
-          <span class="chart-label x">2θ / Q-SPACE</span>
-          <svg class="diffraction-chart" viewBox="0 0 520 260" role="img" aria-label="模擬繞射峰圖">
-            <defs>
-              <linearGradient id="lineGradient" x1="0" x2="1"><stop offset="0" stop-color="#7cb8ff"/><stop offset=".55" stop-color="#7cf7cf"/><stop offset="1" stop-color="#b68cff"/></linearGradient>
-              <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cf7cf" stop-opacity=".34"/><stop offset="1" stop-color="#7cf7cf" stop-opacity="0"/></linearGradient>
-            </defs>
-            <path class="grid" d="M0 52H520M0 104H520M0 156H520M0 208H520M104 0V260M208 0V260M312 0V260M416 0V260"/>
-            <path class="area" d="M0 229 C42 227 66 223 91 217 C122 210 148 205 179 197 C213 188 231 173 248 135 C261 105 270 73 278 29 C287 82 295 126 305 162 C316 202 332 221 352 210 C375 195 392 177 410 170 C443 157 474 162 520 149 L520 260 L0 260 Z"/>
-            <path class="curve" d="M0 229 C42 227 66 223 91 217 C122 210 148 205 179 197 C213 188 231 173 248 135 C261 105 270 73 278 29 C287 82 295 126 305 162 C316 202 332 221 352 210 C375 195 392 177 410 170 C443 157 474 162 520 149"/>
-            <path class="guide" d="M278 24V235M410 50V235"/>
-            <circle class="point" cx="278" cy="29" r="5"/><circle class="point" cx="410" cy="170" r="4"/>
-          </svg>
+      <div class="hero-visual reveal" aria-label="Engineering profile visualization">
+        <div class="visual-card">
+          <div class="visual-top"><span>SYSTEM PROFILE / 2026</span><span class="visual-live">ONLINE</span></div>
+          <div class="system-map">
+            <div class="wafer"><div class="orbit"></div><div class="wafer-core">MECH<br>×<br>EE</div></div>
+            <div class="map-node node-a"><strong>DESIGN</strong>CAD / FEA</div>
+            <div class="map-node node-b"><strong>CONTROL</strong>FPGA / UI</div>
+            <div class="map-node node-c"><strong>SCIENCE</strong>NANO / AFM</div>
+            <div class="map-node node-d"><strong>CODE</strong>PY / C# / JS</div>
+          </div>
+          <div class="visual-metrics">
+            <div class="metric"><small>GPA</small><strong>3.95 / 4.3</strong><span>National Taiwan University</span></div>
+            <div class="metric"><small>ACADEMIC RANK</small><strong>TOP 15%</strong><span>Mechanical Engineering</span></div>
+            <div class="metric"><small>PROFILE</small><strong>ME × ECE</strong><span>Cross-disciplinary track</span></div>
+          </div>
         </div>
-        <div class="console-readout">
-          <div class="readout-card"><span>ORIENTATION</span><strong>(111)B</strong></div>
-          <div class="readout-card"><span>COORDINATE</span><strong>Qx / Qz</strong></div>
-          <div class="readout-card"><span>MODEL STATUS</span><strong class="ok">VALIDATING</strong></div>
-        </div>
-        <div class="console-log"><span>&gt; </span><span id="typed-log" class="typing">cross_validate --hrxrd --rsm --ebsd</span><br><b>✓</b> evidence pipeline initialized</div>
       </div>
     </section>
 
-    <div class="signal-strip" aria-hidden="true">
-      <div class="signal-track">
-        <span>EPITAXIAL MATERIALS</span><i></i><span>RECIPROCAL SPACE</span><i></i><span>CRYSTAL ORIENTATION</span><i></i><span>FIRST-PRINCIPLES</span><i></i><span>SCIENTIFIC COMPUTING</span><i></i>
-        <span>EPITAXIAL MATERIALS</span><i></i><span>RECIPROCAL SPACE</span><i></i><span>CRYSTAL ORIENTATION</span><i></i><span>FIRST-PRINCIPLES</span><i></i><span>SCIENTIFIC COMPUTING</span><i></i>
-      </div>
-    </div>
-
-    <section class="section shell" id="focus">
-      <div class="section-heading reveal">
-        <span class="section-index">01 / FOCUS</span>
-        <div>
-          <p class="section-kicker">RESEARCH DIRECTION</p>
-          <h2 data-lang-block="zh">從晶體結構，到可被驗證的材料機制。</h2>
-          <h2 data-lang-block="en">From crystal structure to testable material mechanisms.</h2>
-        </div>
-      </div>
-
-      <div class="focus-grid">
-        <article class="focus-card reveal">
-          <div class="focus-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17 12 5l7 12H5Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="5" r="2" fill="currentColor"/><circle cx="5" cy="17" r="2" fill="currentColor"/><circle cx="19" cy="17" r="2" fill="currentColor"/></svg></div>
-          <span class="number">01 / EPITAXY</span>
-          <h3 data-lang-block="zh">外延與攣晶分析</h3><h3 data-lang-block="en">Epitaxy & twin analysis</h3>
-          <p data-lang-block="zh">解析 GaAsBi/GaAs(111)B 外延層中的攣晶、取向關係與局部變形，建立訊號來源與物理結構的對應。</p>
-          <p data-lang-block="en">Resolving twins, orientation relationships, and local distortion in GaAsBi/GaAs(111)B epitaxial layers.</p>
-        </article>
-        <article class="focus-card reveal">
-          <div class="focus-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18c3-1 4-5 6-5s2 3 4 3 3-9 5-9 2 8 3 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="1.4"/></svg></div>
-          <span class="number">02 / DIFFRACTION</span>
-          <h3 data-lang-block="zh">繞射與倒易空間</h3><h3 data-lang-block="en">Diffraction & reciprocal space</h3>
-          <p data-lang-block="zh">將 HRXRD、φ scan 與 RSM 放進一致的幾何框架，交叉檢查峰值、座標轉換、應變與結構假設。</p>
-          <p data-lang-block="en">Placing HRXRD, φ scans, and RSM into one geometric framework for peak, strain, and structural validation.</p>
-        </article>
-        <article class="focus-card reveal">
-          <div class="focus-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2" fill="currentColor"/><ellipse cx="12" cy="12" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="1.4"/><ellipse cx="12" cy="12" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="1.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="1.4" transform="rotate(120 12 12)"/></svg></div>
-          <span class="number">03 / COMPUTATION</span>
-          <h3 data-lang-block="zh">第一原理與科學計算</h3><h3 data-lang-block="en">First-principles & computing</h3>
-          <p data-lang-block="zh">使用 Materials Studio / CASTEP 與 Python，將原子模型、應變狀態和可觀測繞射特徵連結起來。</p>
-          <p data-lang-block="en">Using Materials Studio / CASTEP and Python to connect atomistic models, strain states, and observable diffraction features.</p>
-        </article>
+    <section class="shell reveal" aria-label="Profile summary">
+      <div class="quick-stats">
+        <div class="stat"><strong>NTU</strong><span class="zh">機械工程學士 · 2026</span><span class="en">B.E. Mechanical Engineering · 2026</span></div>
+        <div class="stat"><strong>NTUST</strong><span class="zh">電子與電腦工程跨校雙主修</span><span class="en">Double major in Electronic & Computer Engineering</span></div>
+        <div class="stat"><strong>3</strong><span class="zh">奈米、量子資訊、台積電半導體學程</span><span class="en">Nanotechnology, Quantum Information, TSMC programs</span></div>
+        <div class="stat"><strong>4+</strong><span class="zh">機構、電控、程式、奈米儀器整合面向</span><span class="en">Integrated domains across mechanics, control, software, and nano-instrumentation</span></div>
       </div>
     </section>
 
-    <section class="section shell" id="work">
-      <div class="section-heading reveal">
-        <span class="section-index">02 / WORK</span>
-        <div>
-          <p class="section-kicker">SELECTED RESEARCH</p>
-          <h2 data-lang-block="zh">以一條證據鏈，回答複雜的材料問題。</h2>
-          <h2 data-lang-block="en">One evidence chain for complex material questions.</h2>
+    <section class="section" id="experience">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><span class="kicker">Experience</span><h2 class="zh">從理論課程，走到真實系統。</h2><h2 class="en">From theory to real systems.</h2></div>
+          <p class="zh">經歷不是職稱的堆疊，而是我如何在機構、電子、控制與人之間建立連結。重點放在可落地的工程實作與跨領域合作。</p>
+          <p class="en">Experience is not a list of titles. It is how I connect mechanics, electronics, control, and people to build systems that work.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <h3 class="zh">中央研究院物理研究所｜研究實習生</h3><h3 class="en">Institute of Physics, Academia Sinica | Research Intern</h3>
+              <div class="org">AFM SYSTEM DEVELOPMENT</div>
+              <p class="zh">參與原子力顯微鏡系統開發，負責 Flexure Guide 機構設計、有限元素分析、Encoder 量測、FPGA 時序與 PI 回授控制，以及 Qt/C++ 人機介面與 UART 通訊測試。</p>
+              <p class="en">Contributed to an AFM system through flexure-guide design, finite-element analysis, encoder measurement, FPGA timing and PI feedback control, plus Qt/C++ interface and UART communication tests.</p>
+              <div class="timeline-tags"><span>AFM</span><span>FLEXURE</span><span>FEA</span><span>FPGA</span><span>QT / C++</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-year">TEACH</div>
+            <div class="timeline-content">
+              <h3 class="zh">數理輔導老師</h3><h3 class="en">Mathematics & Science Tutor</h3>
+              <div class="org">LEARNING DESIGN / COMMUNICATION</div>
+              <p class="zh">依學生需求調整輔導方式，練習把複雜概念轉化為清楚步驟，也累積與學生、家長及主管溝通協作的經驗。</p>
+              <p class="en">Adapted teaching strategies to individual needs, translating complex ideas into clear steps while developing communication with students, parents, and supervisors.</p>
+              <div class="timeline-tags"><span>MENTORING</span><span>COMMUNICATION</span><span>STRUCTURED THINKING</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-year">CLUB</div>
+            <div class="timeline-content">
+              <h3 class="zh">FRC 機器人社 × 慈幼社</h3><h3 class="en">FRC Robotics × Community Service</h3>
+              <div class="org">TEAMWORK / SOCIAL IMPACT</div>
+              <p class="zh">在 FRC 機器人社參與影像辨識程式；在慈幼社規劃偏鄉教育活動並帶領孩童，培養專案執行、團隊合作與責任感。</p>
+              <p class="en">Worked on image-recognition software in an FRC robotics team and helped organize educational camps for rural elementary students, strengthening teamwork, project execution, and responsibility.</p>
+              <div class="timeline-tags"><span>ROBOTICS</span><span>VISION</span><span>TEAMWORK</span><span>LEADERSHIP</span></div>
+            </div>
+          </article>
         </div>
       </div>
-
-      <article class="project-feature reveal">
-        <div class="project-copy">
-          <div class="project-topline"><span>FEATURED / MATERIALS RESEARCH</span><span>ONGOING</span></div>
-          <h3>GaAsBi/GaAs(111)B Epitaxy & Crystal-Structure Analysis</h3>
-          <p data-lang-block="zh">研究重點包含攣晶形成、晶體取向、局部結構變形，以及 HRXRD 與 RSM 訊號的跨量測對應。核心目標不是只找到峰值，而是說明每個訊號如何產生、它支持哪一個模型，又該如何被下一個實驗驗證。</p>
-          <p data-lang-block="en">The project investigates twin formation, crystal orientation, local structural distortion, and cross-mapping between HRXRD and RSM. The goal is not merely to identify peaks, but to explain how each signal arises and how the model can be tested.</p>
-          <div class="tag-list"><span>GaAsBi</span><span>HRXRD</span><span>RSM</span><span>EBSD</span><span>CASTEP</span><span>Crystallography</span></div>
-        </div>
-        <div class="project-visual" aria-hidden="true">
-          <div class="lattice"><div class="lattice-plane"></div><div class="lattice-plane"></div><div class="lattice-plane"></div></div>
-          <span class="axis-label one">[1̄10] / in-plane</span><span class="axis-label two">[111] / growth axis</span>
-        </div>
-      </article>
     </section>
 
-    <section class="section shell" id="methods">
-      <div class="section-heading reveal">
-        <span class="section-index">03 / METHODS</span>
-        <div>
-          <p class="section-kicker">ENGINEERING WORKFLOW</p>
-          <h2 data-lang-block="zh">量測、模型、驗證，形成可重現的研究流程。</h2>
-          <h2 data-lang-block="en">Measurement, modeling, and validation in a reproducible workflow.</h2>
+    <section class="section" id="achievements">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><span class="kicker">Achievements & Credentials</span><h2 class="zh">成就，不只是一張證書。</h2><h2 class="en">Credentials backed by capability.</h2></div>
+          <p class="zh">以學業表現、專業認證、半導體課程與實習成果，呈現我長期投入跨域學習與工程實作的累積。</p>
+          <p class="en">Academic performance, professional certification, semiconductor training, and internship outcomes reflect a sustained investment in interdisciplinary engineering.</p>
+        </div>
+
+        <div class="achievement-grid">
+          <article class="achievement-card reveal">
+            <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.4 4.9L20 9l-4 3.9.9 5.5L12 15.8 7.1 18.4 8 12.9 4 9l5.6-1.1L12 3z"/></svg></div>
+            <div class="type">ACADEMIC PERFORMANCE</div>
+            <h3 class="zh">GPA 3.95 / 4.3 · 系排名前 15%</h3><h3 class="en">GPA 3.95 / 4.3 · Top 15%</h3>
+            <p class="zh">在機械核心訓練之外，同步拓展電子、固態、控制與數位系統課程。</p><p class="en">Strong performance while expanding beyond core mechanics into electronics, solid-state physics, control, and digital systems.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M8.5 12.5L7 21l5-3 5 3-1.5-8.5"/></svg></div>
+            <div class="type">PROFESSIONAL CERTIFICATION</div>
+            <h3>SAS Certified Specialist: Machine Learning Using SAS Viya 3.5</h3>
+            <p class="zh">建立機器學習、資料建模與分析流程的基礎能力。</p><p class="en">Foundation in machine learning, data modeling, and analytical workflows.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19h16M6 16V8l6-4 6 4v8M9 16v-5h6v5"/></svg></div>
+            <div class="type">RESEARCH RECOGNITION</div>
+            <h3 class="zh">中研院物理所暑期學生研習證明</h3><h3 class="en">Academia Sinica Summer Research Certificate</h3>
+            <p class="zh">於研究團隊中主動學習並完成跨機構、電控與程式的整合工作。</p><p class="en">Recognized for active learning and cross-domain contributions within a research team.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5M8 17h7"/></svg></div>
+            <div class="type">SEMICONDUCTOR CURRICULUM</div>
+            <h3 class="zh">臺大 × 台積電半導體學程修畢</h3><h3 class="en">NTU × TSMC Semiconductor Curriculum</h3>
+            <p class="zh">結合半導體元件、製程與設備基礎，補足從材料到產線的產業視角。</p><p class="en">Built an industry-oriented view spanning semiconductor devices, processes, and equipment.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l2-5 4 10 2-5h6"/><path d="M5 4h14v16H5z"/></svg></div>
+            <div class="type">TSMC COURSE COMPLETION</div>
+            <h3 class="zh">設備元件機台基礎 × TF 機台基礎</h3><h3 class="en">Equipment Components × Thin-Film Equipment Fundamentals</h3>
+            <p class="zh">完成台積電新人訓練中心相關課程，強化半導體設備與薄膜製程基礎。</p><p class="en">Completed TSMC training in equipment components and thin-film equipment fundamentals.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5h14v14H5zM9 2v6M15 2v6M9 16h6M12 12v7"/></svg></div>
+            <div class="type">INTERDISCIPLINARY TRACK</div>
+            <h3 class="zh">機械主修 × 電子與電腦工程雙主修 × 三學程</h3><h3 class="en">Mechanical Engineering × ECE Double Major × Three Programs</h3>
+            <p class="zh">以系統觀點串聯機構、電路、控制、材料與計算。</p><p class="en">A systems-oriented path connecting mechanics, circuits, control, materials, and computing.</p>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="method-grid">
-        <article class="method-panel reveal">
-          <h3 data-lang-block="zh">研究流程</h3><h3 data-lang-block="en">Research workflow</h3>
-          <p data-lang-block="zh">每一步都保留輸入、假設與驗證方法，讓結果不只是合理，而是能被追蹤與重現。</p>
-          <p data-lang-block="en">Each stage retains its inputs, assumptions, and validation path so the conclusion can be traced and reproduced.</p>
-          <div class="workflow">
-            <div class="workflow-item"><span>01</span><div><strong>Frame</strong><small data-lang-block="zh">定義問題與可否證假設</small><small data-lang-block="en">Define a falsifiable hypothesis</small></div></div>
-            <div class="workflow-item"><span>02</span><div><strong>Measure</strong><small data-lang-block="zh">校正儀器與座標系統</small><small data-lang-block="en">Calibrate measurement and coordinates</small></div></div>
-            <div class="workflow-item"><span>03</span><div><strong>Model</strong><small data-lang-block="zh">建立晶體與物理模型</small><small data-lang-block="en">Build crystal and physical models</small></div></div>
-            <div class="workflow-item"><span>04</span><div><strong>Validate</strong><small data-lang-block="zh">跨方法比對與誤差檢查</small><small data-lang-block="en">Cross-check methods and uncertainty</small></div></div>
+    <section class="section" id="project">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div><span class="kicker">Selected Engineering Work</span><h2 class="zh">一個專案，看見整合能力。</h2><h2 class="en">One project, multiple engineering layers.</h2></div>
+          <p class="zh">不以研究題目鋪陳，而以「我做了什麼、如何驗證、獲得什麼結果」呈現最具代表性的實作經驗。</p>
+          <p class="en">The focus is not the research topic itself, but what I built, how it was validated, and what the results showed.</p>
+        </div>
+
+        <div class="project-panel">
+          <article class="project-story reveal">
+            <div class="label">AFM SYSTEM DEVELOPMENT</div>
+            <h3 class="zh">原子力顯微鏡系統：從撓性機構到 FPGA 控制</h3><h3 class="en">AFM system: from flexure mechanics to FPGA control</h3>
+            <p class="zh">在中研院研究實習中，參與奈米精度平台的機構、量測、控制與介面整合。核心價值不是單一元件，而是讓機械、電子與軟體真正協同運作。</p>
+            <p class="en">During my Academia Sinica internship, I worked across precision mechanics, measurement, control, and interface integration. The key contribution was making mechanical, electronic, and software layers work together.</p>
+            <div class="project-list">
+              <div><b>01</b><span class="zh">以 CAD 與 FEA 設計具位移放大機制的 Flexure Guide，評估位移、剛性、共振與耦合。</span><span class="en">Designed a displacement-amplifying flexure guide with CAD and FEA, evaluating travel, stiffness, resonance, and axis coupling.</span></div>
+              <div><b>02</b><span class="zh">使用雷射位移量測與掃頻實驗，比對理論模型與實際響應。</span><span class="en">Validated the model through laser displacement measurement and frequency sweep experiments.</span></div>
+              <div><b>03</b><span class="zh">以 Verilog / FPGA 讀取 Encoder 訊號，並透過 Qt/C++ 與 UART 建立 GUI 通訊測試。</span><span class="en">Read encoder signals with Verilog/FPGA and built Qt/C++ GUI communication tests over UART.</span></div>
+            </div>
+          </article>
+
+          <div class="project-data reveal">
+            <div class="data-top"><span>MEASUREMENT SUMMARY / VERIFIED OUTPUT</span><strong>AFM_DEV_01</strong></div>
+            <div class="data-grid">
+              <div class="data-card"><small>FEA MAX TRAVEL</small><strong>4.92 μm</strong><em class="zh">理論位移量</em><em class="en">Simulated travel</em></div>
+              <div class="data-card"><small>MEASURED TRAVEL</small><strong>≈ 4.3 μm</strong><em class="zh">實際量測</em><em class="en">Measured travel</em></div>
+              <div class="data-card"><small>MODE 01 ERROR</small><strong>2.22%</strong><em class="zh">第一共振頻差異</em><em class="en">First-mode difference</em></div>
+              <div class="data-card"><small>MODE 02 ERROR</small><strong>14.73%</strong><em class="zh">第二共振頻差異</em><em class="en">Second-mode difference</em></div>
+            </div>
+            <div class="signal-chart" aria-label="Illustrative measurement curve">
+              <svg viewBox="0 0 650 160" preserveAspectRatio="none" role="img">
+                <defs><linearGradient id="chartGradient" x1="0" x2="1"><stop stop-color="#1d8fff"/><stop offset="1" stop-color="#69e2ff"/></linearGradient></defs>
+                <path class="axis" d="M36 18V135H625M36 104H625M36 72H625M36 40H625"/>
+                <path class="line" d="M38 128 C82 121, 98 112, 131 103 S190 89, 230 79 S288 70, 327 60 S382 54, 422 44 S477 37, 517 27 S581 20, 624 17"/>
+                <circle class="point" cx="624" cy="17" r="4"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="shell skills-layout">
+        <div class="skills-copy reveal">
+          <span class="kicker">Capabilities</span>
+          <h3 class="zh">工具很多，但核心是系統化解題。</h3><h3 class="en">Tools matter. Systems thinking matters more.</h3>
+          <p class="zh">能力橫跨機構、電子、數位系統與資料分析；面對新問題時，我會先定義需求、建立模型，再用量測與迭代收斂。</p>
+          <p class="en">My toolkit spans mechanics, electronics, digital systems, and data analysis. I approach new problems by defining requirements, building models, measuring outcomes, and iterating.</p>
+        </div>
+
+        <div class="skill-groups">
+          <article class="skill-group reveal">
+            <h4>Mechanical / Precision Design</h4>
+            <p class="zh">機構設計、工程圖學、撓性機構、有限元素分析、剛性與共振評估。</p><p class="en">Mechanical design, engineering drawing, flexure mechanisms, finite-element analysis, stiffness and resonance evaluation.</p>
+            <div class="skill-chips"><span>SolidWorks</span><span>Inventor</span><span>CAD</span><span>FEA</span><span>Flexure Design</span></div>
+          </article>
+          <article class="skill-group reveal">
+            <h4>Embedded / Digital Systems</h4>
+            <p class="zh">FPGA 時序、Encoder 訊號處理、PI 回授控制、數位系統與 UART 通訊。</p><p class="en">FPGA timing, encoder signal processing, PI feedback control, digital systems, and UART communication.</p>
+            <div class="skill-chips"><span>Verilog</span><span>FPGA</span><span>UART</span><span>Encoder</span><span>Control</span></div>
+          </article>
+          <article class="skill-group reveal">
+            <h4>Software / Data</h4>
+            <p class="zh">程式設計、資料處理、自動化工具、網頁開發與基礎機器學習。</p><p class="en">Programming, data processing, automation, web development, and foundational machine learning.</p>
+            <div class="skill-chips"><span>Python</span><span>C#</span><span>C++ / Qt</span><span>JavaScript</span><span>HTML / CSS</span><span>SAS</span></div>
+          </article>
+          <article class="skill-group reveal">
+            <h4>Semiconductor / Nano</h4>
+            <p class="zh">固態物理、固態電子、電子材料、半導體元件與設備，以及 AFM 奈米儀器實務。</p><p class="en">Solid-state physics, solid-state electronics, electronic materials, semiconductor devices and equipment, plus hands-on AFM experience.</p>
+            <div class="skill-chips"><span>AFM</span><span>Solid-State Physics</span><span>Semiconductor</span><span>Thin Film</span><span>Nano Instrumentation</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="shell">
+        <article class="about-card reveal">
+          <div class="about-intro">
+            <div class="quote-mark">“</div>
+            <h3 class="zh">勇於探索，也願意把每一步做紮實。</h3><h3 class="en">Curious enough to explore, disciplined enough to validate.</h3>
+          </div>
+          <div class="about-body">
+            <p class="zh">我喜歡跨出單一科系的邊界。機械工程給我嚴謹的數理與系統基礎，電子與數位課程讓我理解訊號、電路與控制；奈米與固態相關課程，則讓我能從材料與元件尺度思考工程問題。</p>
+            <p class="en">I enjoy working beyond the boundary of a single discipline. Mechanical engineering gives me a rigorous mathematical and systems foundation; electronics and digital systems help me understand signals, circuits, and control; nanotechnology and solid-state courses allow me to reason from the material and device scale.</p>
+            <p class="zh">我在意的不只是「做出來」，也在意結果是否能被量測、解釋與改善。面對陌生任務，我會主動拆解問題、與不同背景的人討論，並把學到的內容轉化成可執行的方案。</p>
+            <p class="en">I care not only about making something work, but also whether the result can be measured, explained, and improved. When facing unfamiliar tasks, I break problems down, learn from people with different expertise, and convert new knowledge into executable plans.</p>
+            <div class="principles">
+              <div class="principle"><strong class="zh">系統思維</strong><strong class="en">Systems Thinking</strong><span class="zh">先理解介面，再優化單點。</span><span class="en">Understand interfaces before optimizing parts.</span></div>
+              <div class="principle"><strong class="zh">量測驗證</strong><strong class="en">Measured Validation</strong><span class="zh">用數據連接模型與實際。</span><span class="en">Connect models to reality through data.</span></div>
+              <div class="principle"><strong class="zh">跨域協作</strong><strong class="en">Cross-domain Collaboration</strong><span class="zh">讓專業語言變成共同語言。</span><span class="en">Turn expertise into shared language.</span></div>
+            </div>
           </div>
         </article>
-
-        <article class="method-panel reveal">
-          <h3 data-lang-block="zh">方法與工具</h3><h3 data-lang-block="en">Methods & toolkit</h3>
-          <p data-lang-block="zh">將實驗量測、晶體學與計算方法整合成同一個分析系統。</p>
-          <p data-lang-block="en">An integrated analysis system spanning experiments, crystallography, and computation.</p>
-          <div class="skills">
-            <div class="skill"><b>HRXRD / RSM / φ scan</b><span data-lang-block="zh">高解析繞射、倒易空間與取向分析</span><span data-lang-block="en">High-resolution diffraction and orientation analysis</span><div class="skill-meter"><i style="--width:92%"></i></div></div>
-            <div class="skill"><b>EBSD / Crystallography</b><span data-lang-block="zh">晶體取向、對稱性與攣晶辨識</span><span data-lang-block="en">Orientation, symmetry, and twin identification</span><div class="skill-meter"><i style="--width:84%"></i></div></div>
-            <div class="skill"><b>Materials Studio / CASTEP</b><span data-lang-block="zh">原子模型、幾何最佳化與第一原理計算</span><span data-lang-block="en">Atomistic modeling and first-principles calculation</span><div class="skill-meter"><i style="--width:78%"></i></div></div>
-            <div class="skill"><b>Python / Data Analysis</b><span data-lang-block="zh">座標轉換、資料處理與可重現視覺化</span><span data-lang-block="en">Coordinate transforms and reproducible analysis</span><div class="skill-meter"><i style="--width:82%"></i></div></div>
-          </div>
-        </article>
       </div>
     </section>
 
-    <section class="section shell" id="contact">
-      <div class="contact-card reveal">
-        <p class="section-kicker">CONTACT / COLLABORATION</p>
-        <h2 data-lang-block="zh">讓複雜訊號，變成清楚的研究結論。</h2>
-        <h2 data-lang-block="en">Turn complex signals into clear research conclusions.</h2>
-        <p data-lang-block="zh">歡迎針對半導體材料、繞射分析、晶體結構或科學計算進行技術交流與研究合作。</p>
-        <p data-lang-block="en">Open to technical exchange and research collaboration in semiconductor materials, diffraction analysis, crystal structure, and scientific computing.</p>
-        <div class="contact-actions">
-          <a class="button button-primary" href="https://github.com/zoo312760851" target="_blank" rel="noreferrer">GitHub profile ↗</a>
-          <a class="button button-secondary" href="#top"><span data-lang-block="zh">回到頂部</span><span data-lang-block="en">Back to top</span></a>
+    <section class="section" id="contact">
+      <div class="shell">
+        <div class="contact-panel reveal">
+          <div class="contact-inner">
+            <span class="kicker">Contact</span>
+            <h2 class="zh">一起把問題，做成可以運作的系統。</h2><h2 class="en">Let’s turn a problem into a working system.</h2>
+            <p class="zh">歡迎交流工程設計、精密系統、半導體設備、研究合作與實習／職涯機會。</p>
+            <p class="en">Open to conversations about engineering design, precision systems, semiconductor equipment, research collaboration, and career opportunities.</p>
+            <div class="contact-actions">
+              <a class="button button-primary" href="mailto:zoo312760851@gmail.com">zoo312760851@gmail.com</a>
+              <a class="button button-secondary" href="https://github.com/zoo312760851" target="_blank" rel="noreferrer">GitHub / zoo312760851</a>
+            </div>
+            <div class="contact-note">TAIPEI / TAIWAN · AVAILABLE FOR ENGINEERING CONVERSATIONS</div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-inner shell"><span>© <span id="year"></span> Chen-Hung Tsao</span><span>Research · Engineering · Computation</span></div>
+    <div class="shell footer-row">
+      <span>© <span id="year"></span> Chen-Hung Tsao. Built for GitHub Pages.</span>
+      <div class="footer-links"><a href="#top">TOP</a><a href="mailto:zoo312760851@gmail.com">EMAIL</a><a href="https://github.com/zoo312760851" target="_blank" rel="noreferrer">GITHUB</a></div>
+    </div>
   </footer>
 
   <script>
-    (() => {
-      const root = document.documentElement;
-      const header = document.querySelector('.site-header');
-      const langButton = document.getElementById('lang-toggle');
-      const navButton = document.getElementById('nav-toggle');
-      const navLinks = document.getElementById('nav-links');
-      const storage = {
-        get(key) { try { return localStorage.getItem(key); } catch (_) { return null; } },
-        set(key, value) { try { localStorage.setItem(key, value); } catch (_) {} }
-      };
-      const storedLang = storage.get('portfolio-lang');
+    const root = document.documentElement;
+    const langToggle = document.getElementById('langToggle');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const siteHeader = document.getElementById('siteHeader');
 
-      const setLang = (lang) => {
-        root.dataset.lang = lang;
-        root.lang = lang === 'zh' ? 'zh-Hant' : 'en';
-        langButton.textContent = lang === 'zh' ? 'EN' : '中';
-        storage.set('portfolio-lang', lang);
-      };
+    langToggle.addEventListener('click', () => {
+      const next = root.dataset.lang === 'zh' ? 'en' : 'zh';
+      root.dataset.lang = next;
+      root.lang = next === 'zh' ? 'zh-Hant' : 'en';
+      langToggle.textContent = next === 'zh' ? 'EN' : '中';
+      localStorage.setItem('portfolio-language', next);
+    });
 
-      setLang(storedLang === 'en' ? 'en' : 'zh');
-      langButton.addEventListener('click', () => setLang(root.dataset.lang === 'zh' ? 'en' : 'zh'));
+    const savedLanguage = localStorage.getItem('portfolio-language');
+    if (savedLanguage === 'en') {
+      root.dataset.lang = 'en';
+      root.lang = 'en';
+      langToggle.textContent = '中';
+    }
 
-      const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 18);
-      updateHeader();
-      window.addEventListener('scroll', updateHeader, { passive: true });
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
 
-      navButton.addEventListener('click', () => {
-        const open = navLinks.classList.toggle('open');
-        navButton.setAttribute('aria-expanded', String(open));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    const updateHeader = () => siteHeader.classList.toggle('scrolled', window.scrollY > 16);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
       });
-      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        navButton.setAttribute('aria-expanded', 'false');
-      }));
+    }, { threshold: .12 });
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: .12 });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
