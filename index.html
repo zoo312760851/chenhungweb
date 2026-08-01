@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Chen-Hung Tsao — semiconductor research, materials engineering, scientific computing, and diffraction analysis." />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:title" content="Chen-Hung Tsao | Research Engineer" />
+  <meta property="og:description" content="Semiconductor materials, diffraction analysis, and scientific computing." />
+  <meta property="og:type" content="website" />
+  <title>Chen-Hung Tsao | Research Engineer</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="主要導覽">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <span class="brand-mark">CT</span>
+        <span class="brand-text">CHEN-HUNG TSAO</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="開啟導覽選單">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about" data-i18n="nav.about">關於</a>
+        <a href="#work" data-i18n="nav.work">專案</a>
+        <a href="#toolkit" data-i18n="nav.toolkit">工具</a>
+        <a href="#contact" data-i18n="nav.contact">聯絡</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="utility-button" id="language-toggle" type="button" aria-label="切換語言">EN</button>
+        <button class="utility-button icon-button" id="theme-toggle" type="button" aria-label="切換明暗主題">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M18.36 5.64l-1.42 1.42M7.06 16.94l-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          <span data-i18n="hero.eyebrow">RESEARCH · ENGINEERING · COMPUTATION</span>
+        </div>
+        <h1>
+          <span data-i18n="hero.line1">用工程思維，</span>
+          <span class="gradient-text" data-i18n="hero.line2">拆解材料世界。</span>
+        </h1>
+        <p class="hero-lead" data-i18n="hero.lead">
+          我是 Chen-Hung Tsao，專注於 III–V 族半導體、繞射分析與科學計算，將實驗訊號轉化成可驗證的材料洞見。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">
+            <span data-i18n="hero.ctaPrimary">查看精選專案</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="button button-secondary" href="#contact" data-i18n="hero.ctaSecondary">與我聯絡</a>
+        </div>
+        <div class="hero-meta" aria-label="專業領域">
+          <div><span class="meta-label" data-i18n="hero.focusLabel">FOCUS</span><strong>GaAsBi / III–V</strong></div>
+          <div><span class="meta-label" data-i18n="hero.methodsLabel">METHODS</span><strong>HRXRD · RSM · EBSD</strong></div>
+          <div><span class="meta-label" data-i18n="hero.computeLabel">COMPUTE</span><strong>CASTEP · Python</strong></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" data-delay="120">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span>materials-lab / analysis</span>
+            <span class="terminal-status">LIVE</span>
+          </div>
+          <div class="terminal-body" aria-label="模擬分析終端機">
+            <div><span class="terminal-prompt">$</span> init diffraction_pipeline.py</div>
+            <div class="terminal-muted">Loading reciprocal-space coordinates...</div>
+            <div class="terminal-success">✓ geometry validated</div>
+            <div><span class="terminal-prompt">$</span> fit --model epitaxy --orientation 111B</div>
+            <div class="terminal-muted">Resolving strain, twins, and local distortion</div>
+            <div class="terminal-data"><span>Qx</span><b>0.2472 Å⁻¹</b></div>
+            <div class="terminal-data"><span>Qz</span><b>3.8501 Å⁻¹</b></div>
+            <div class="terminal-success">✓ structure hypothesis ready</div>
+            <div class="terminal-command"><span class="terminal-prompt">$</span> <span id="typed-command"></span><span class="caret">▋</span></div>
+          </div>
+        </div>
+
+        <div class="orbital-card orbital-card-a" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="5"/>
+            <ellipse cx="60" cy="60" rx="46" ry="18"/>
+            <ellipse cx="60" cy="60" rx="46" ry="18" transform="rotate(60 60 60)"/>
+            <ellipse cx="60" cy="60" rx="46" ry="18" transform="rotate(120 60 60)"/>
+            <circle class="electron e1" cx="106" cy="60" r="3"/>
+            <circle class="electron e2" cx="37" cy="20" r="3"/>
+            <circle class="electron e3" cx="37" cy="100" r="3"/>
+          </svg>
+        </div>
+        <div class="signal-card orbital-card-b" aria-hidden="true">
+          <svg viewBox="0 0 160 70" preserveAspectRatio="none"><path d="M0 58 C18 57, 25 55, 34 53 S49 47, 58 45 S72 40, 81 14 S92 54, 105 50 S126 42, 160 40"/></svg>
+          <span>HRXRD / SIGNAL</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="能力摘要">
+      <div class="signal-track">
+        <span>SEMICONDUCTOR MATERIALS</span><i></i>
+        <span>RECIPROCAL SPACE</span><i></i>
+        <span>CRYSTAL ORIENTATION</span><i></i>
+        <span>FIRST-PRINCIPLES</span><i></i>
+        <span>SCIENTIFIC COMPUTING</span><i></i>
+        <span>SEMICONDUCTOR MATERIALS</span><i></i>
+        <span>RECIPROCAL SPACE</span><i></i>
+        <span>CRYSTAL ORIENTATION</span><i></i>
+      </div>
+    </section>
+
+    <section class="about shell section" id="about">
+      <div class="section-heading reveal">
+        <span class="section-index">01</span>
+        <div>
+          <p class="section-kicker" data-i18n="about.kicker">ABOUT / APPROACH</p>
+          <h2 data-i18n="about.title">從量測到模型，建立完整證據鏈。</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-statement reveal">
+          <p data-i18n="about.body1">我的工作橫跨材料成長、晶體結構分析與計算模擬。比起單純找峰值，我更在意訊號如何產生、不同量測之間是否一致，以及模型能否被下一個實驗推翻或驗證。</p>
+          <p data-i18n="about.body2">這種方法讓複雜問題變成可追蹤的工程流程：定義假設、校正座標、交叉驗證，最後把結果轉化成清楚的圖像與決策。</p>
+        </article>
+
+        <div class="principles reveal" data-delay="100">
+          <div class="principle-card">
+            <span>01</span><h3 data-i18n="about.p1Title">Evidence first</h3><p data-i18n="about.p1Body">先建立可重現的資料與校正流程，再談材料機制。</p>
+          </div>
+          <div class="principle-card">
+            <span>02</span><h3 data-i18n="about.p2Title">Cross validation</h3><p data-i18n="about.p2Body">以 HRXRD、RSM、EBSD 與模擬結果互相驗證。</p>
+          </div>
+          <div class="principle-card">
+            <span>03</span><h3 data-i18n="about.p3Title">Explain clearly</h3><p data-i18n="about.p3Body">將複雜物理轉成可溝通、可行動的工程敘事。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work shell section" id="work">
+      <div class="section-heading reveal">
+        <span class="section-index">02</span>
+        <div>
+          <p class="section-kicker" data-i18n="work.kicker">SELECTED WORK</p>
+          <h2 data-i18n="work.title">研究與工程專案。</h2>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-featured reveal">
+          <div class="project-topline"><span>FEATURED / MATERIALS</span><span>2026</span></div>
+          <div class="project-visual lattice-visual" aria-hidden="true">
+            <div class="lattice-plane plane-a"></div>
+            <div class="lattice-plane plane-b"></div>
+            <div class="lattice-nodes"></div>
+            <span class="axis axis-x">[1̄10]</span>
+            <span class="axis axis-z">[111]</span>
+          </div>
+          <div class="project-content">
+            <h3>GaAsBi/GaAs(111)B Epitaxy & Twin Analysis</h3>
+            <p data-i18n="work.p1Body">結合 HRXRD、φ scan、RSM 與 EBSD，分析外延薄膜的攣晶、晶體取向與局部結構變形，建立訊號來源與晶體模型的對應關係。</p>
+            <div class="tag-list"><span>HRXRD</span><span>RSM</span><span>EBSD</span><span>Crystallography</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="80">
+          <div class="project-topline"><span>ANALYSIS PIPELINE</span><span>DATA</span></div>
+          <div class="mini-chart" aria-hidden="true">
+            <svg viewBox="0 0 400 160" preserveAspectRatio="none"><path class="chart-grid" d="M0 40H400M0 80H400M0 120H400M80 0V160M160 0V160M240 0V160M320 0V160"/><path class="chart-line" d="M0 138 C42 135 54 130 78 126 S116 119 140 113 S180 94 198 50 S220 132 250 118 S310 101 400 95"/><path class="chart-fill" d="M0 138 C42 135 54 130 78 126 S116 119 140 113 S180 94 198 50 S220 132 250 118 S310 101 400 95 L400 160 L0 160 Z"/></svg>
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="work.p2Title">Reciprocal-Space Analysis Pipeline</h3>
+            <p data-i18n="work.p2Body">將 Q-space、2θ 幾何轉換、峰值辨識與誤差檢查整合成一致流程，降低不同量測座標系之間的解讀偏差。</p>
+            <div class="tag-list"><span>Python</span><span>Data Analysis</span><span>Diffraction</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="160">
+          <div class="project-topline"><span>COMPUTATIONAL MATERIALS</span><span>MODEL</span></div>
+          <div class="code-visual" aria-hidden="true">
+            <div><span>01</span><b>task</b> : GeometryOptimization</div>
+            <div><span>02</span><b>xc_functional</b> : PBE</div>
+            <div><span>03</span><b>cut_off_energy</b> : converged</div>
+            <div><span>04</span><b>kpoint_mp_grid</b> : validated</div>
+            <div><span>05</span><b>calculate_stress</b> : true</div>
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="work.p3Title">First-Principles Materials Modeling</h3>
+            <p data-i18n="work.p3Body">使用 Materials Studio / CASTEP 建立原子模型，探索成分、應變與局部結構變化如何影響可觀測的繞射特徵。</p>
+            <div class="tag-list"><span>CASTEP</span><span>DFT</span><span>Materials Studio</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="toolkit shell section" id="toolkit">
+      <div class="section-heading reveal">
+        <span class="section-index">03</span>
+        <div>
+          <p class="section-kicker" data-i18n="toolkit.kicker">TOOLKIT / CAPABILITIES</p>
+          <h2 data-i18n="toolkit.title">把複雜問題拆成可執行模組。</h2>
+        </div>
+      </div>
+
+      <div class="toolkit-grid">
+        <article class="tool-card reveal">
+          <div class="tool-icon">01</div>
+          <h3 data-i18n="toolkit.t1Title">Characterization</h3>
+          <p data-i18n="toolkit.t1Body">高解析 X 光繞射、倒易空間圖、方位角掃描與電子背向散射繞射。</p>
+          <div class="tool-meter"><span style="--value: 91%"></span></div>
+          <small>HRXRD / RSM / φ scan / EBSD</small>
+        </article>
+        <article class="tool-card reveal" data-delay="60">
+          <div class="tool-icon">02</div>
+          <h3 data-i18n="toolkit.t2Title">Modeling</h3>
+          <p data-i18n="toolkit.t2Body">第一原理計算、晶體模型建構、幾何最佳化與結構—訊號對照。</p>
+          <div class="tool-meter"><span style="--value: 84%"></span></div>
+          <small>CASTEP / DFT / Crystal Models</small>
+        </article>
+        <article class="tool-card reveal" data-delay="120">
+          <div class="tool-icon">03</div>
+          <h3 data-i18n="toolkit.t3Title">Scientific Computing</h3>
+          <p data-i18n="toolkit.t3Body">資料清理、座標轉換、視覺化與可重現的分析流程設計。</p>
+          <div class="tool-meter"><span style="--value: 87%"></span></div>
+          <small>Python / Excel / Data Visualization</small>
+        </article>
+        <article class="tool-card reveal" data-delay="180">
+          <div class="tool-icon">04</div>
+          <h3 data-i18n="toolkit.t4Title">Technical Communication</h3>
+          <p data-i18n="toolkit.t4Body">將研究問題整理成清楚的圖表、簡報與可供決策的技術敘事。</p>
+          <div class="tool-meter"><span style="--value: 89%"></span></div>
+          <small>Reports / Slides / Research Storytelling</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow shell section">
+      <div class="workflow-panel reveal">
+        <div class="workflow-copy">
+          <p class="section-kicker" data-i18n="workflow.kicker">HOW I WORK</p>
+          <h2 data-i18n="workflow.title">一條可追蹤的研究管線。</h2>
+          <p data-i18n="workflow.body">每一步都保留輸入、假設與驗證方法，讓結果不只是看起來合理，而是能被重現。</p>
+        </div>
+        <ol class="workflow-steps">
+          <li><span>01</span><div><b data-i18n="workflow.s1Title">Frame</b><small data-i18n="workflow.s1Body">定義問題與可否證假設</small></div></li>
+          <li><span>02</span><div><b data-i18n="workflow.s2Title">Measure</b><small data-i18n="workflow.s2Body">校正量測與座標系統</small></div></li>
+          <li><span>03</span><div><b data-i18n="workflow.s3Title">Model</b><small data-i18n="workflow.s3Body">建立結構與物理模型</small></div></li>
+          <li><span>04</span><div><b data-i18n="workflow.s4Title">Validate</b><small data-i18n="workflow.s4Body">跨方法比對與誤差檢查</small></div></li>
+          <li><span>05</span><div><b data-i18n="workflow.s5Title">Communicate</b><small data-i18n="workflow.s5Body">轉化為清楚的研究結論</small></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact shell section" id="contact">
+      <div class="contact-panel reveal">
+        <div>
+          <p class="section-kicker" data-i18n="contact.kicker">CONTACT / COLLABORATION</p>
+          <h2 data-i18n="contact.title">一起解決值得深入的問題。</h2>
+          <p data-i18n="contact.body">研究合作、材料分析或技術交流，歡迎透過電子郵件或 GitHub 與我聯絡。</p>
+        </div>
+        <div class="contact-actions">
+          <!-- 將下方信箱替換成你的真實 Email -->
+          <a class="contact-link" href="mailto:your.email@example.com">
+            <span>EMAIL</span><b>your.email@example.com</b><i>↗</i>
+          </a>
+          <!-- 將 # 替換成你的 GitHub 個人頁連結 -->
+          <a class="contact-link" href="#" data-placeholder-link="true">
+            <span>GITHUB</span><b>github.com/your-username</b><i>↗</i>
+          </a>
+          <!-- 將 # 替換成你的 LinkedIn 個人頁連結 -->
+          <a class="contact-link" href="#" data-placeholder-link="true">
+            <span>LINKEDIN</span><b>linkedin.com/in/your-profile</b><i>↗</i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div><span class="brand-mark small">CT</span><span>Chen-Hung Tsao</span></div>
+    <p>Designed for clarity. Built for GitHub Pages.</p>
+    <a href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+  <div class="command-palette" id="command-palette" role="dialog" aria-modal="true" aria-labelledby="command-title" hidden>
+    <div class="command-backdrop" data-close-command></div>
+    <div class="command-box">
+      <div class="command-search">
+        <span>⌘</span><input id="command-input" type="text" autocomplete="off" placeholder="Navigate…" aria-label="快速導覽" />
+        <kbd>ESC</kbd>
+      </div>
+      <p id="command-title">QUICK NAVIGATION</p>
+      <div class="command-list">
+        <button type="button" data-target="#about"><span>01</span><b>About</b><kbd>A</kbd></button>
+        <button type="button" data-target="#work"><span>02</span><b>Selected Work</b><kbd>W</kbd></button>
+        <button type="button" data-target="#toolkit"><span>03</span><b>Toolkit</b><kbd>T</kbd></button>
+        <button type="button" data-target="#contact"><span>04</span><b>Contact</b><kbd>C</kbd></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
