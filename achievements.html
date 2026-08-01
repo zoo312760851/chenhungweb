@@ -32,15 +32,69 @@
   <main id="main">
 <section class="page-hero compact"><div class="shell reveal"><span class="kicker">Achievements & Capabilities</span><h1 class="page-title zh">成就、認證與跨域能力</h1><h1 class="page-title en">Achievements, credentials, and interdisciplinary capabilities</h1><p class="page-intro zh">專業課程與實作經驗並非獨立存在，而是在精密系統、電子與半導體／奈米領域中交疊。</p><p class="page-intro en">Coursework and practical experience overlap across precision mechanics, electronics, and semiconductor / nano domains.</p></div></section>
 <section class="section"><div class="shell"><div class="section-head reveal"><div><span class="kicker">Interdisciplinary Capability Map</span><h2 class="zh">專業課程 × 實作經驗</h2><h2 class="en">Coursework × practical experience</h2></div><p class="zh">三個領域的交集形成精密系統整合能力，中心位置對應 AFM、量測、FPGA 與 GUI 等跨域實作。</p><p class="en">The overlap of three domains forms a precision-system integration capability, represented by AFM, measurement, FPGA, and GUI work at the center.</p></div>
-<div class="venn-shell reveal"><div class="venn-stage">
-<svg class="venn-svg" viewBox="0 0 920 610" role="img" aria-label="Interdisciplinary capability Venn diagram">
-  <circle class="venn-circle mech" data-domain="mech" tabindex="0" cx="348" cy="270" r="210"/><circle class="venn-circle elec" data-domain="elec" tabindex="0" cx="572" cy="270" r="210"/><circle class="venn-circle nano" data-domain="nano" tabindex="0" cx="460" cy="420" r="210"/>
-  <text class="venn-label" x="236" y="150" font-size="24">機械與精密工程</text><text class="venn-sub" x="226" y="178">力學 · CAD · FEA · 控制 · 撓性機構</text>
-  <text class="venn-label" x="570" y="150" font-size="24">電子與數位系統</text><text class="venn-sub" x="564" y="178">電路 · 電子 · 數位邏輯 · Verilog · FPGA</text>
-  <text class="venn-label" x="365" y="560" font-size="24">半導體與奈米</text><text class="venn-sub" x="345" y="586">固態 · 材料 · 元件 · 薄膜 · AFM</text>
-  <text class="venn-center" x="460" y="324">精密系統整合</text><text class="venn-center-sub" x="460" y="347">AFM · ENCODER · MEASUREMENT · GUI / UART</text>
-</svg></div>
-<div class="domain-grid"><article class="domain-card" data-domain="mech"><h3 class="zh">機械與精密工程</h3><h3 class="en">Mechanical & Precision Engineering</h3><ul><li>五大力學與機構設計</li><li>CAD / FEA</li><li>Flexure Guide 與共振分析</li></ul></article><article class="domain-card" data-domain="elec"><h3 class="zh">電子與數位系統</h3><h3 class="en">Electronics & Digital Systems</h3><ul><li>電路、電子與數位邏輯</li><li>Verilog / FPGA</li><li>Encoder、PI 控制、UART</li></ul></article><article class="domain-card" data-domain="nano"><h3 class="zh">半導體與奈米</h3><h3 class="en">Semiconductor & Nano</h3><ul><li>固態物理與電子材料</li><li>半導體元件與設備</li><li>薄膜與 AFM 奈米量測</li></ul></article><article class="domain-card" data-domain="center"><h3 class="zh">交集：系統整合</h3><h3 class="en">Intersection: System Integration</h3><ul><li>從模型到量測驗證</li><li>機構、電子與軟體協作</li><li>可重複的工程成果</li></ul></article></div></div>
+<div class="venn-shell reveal">
+  <div class="venn-stage">
+    <svg class="venn-svg" viewBox="0 0 920 650" role="img" aria-label="Interdisciplinary capability Venn diagram">
+      <circle class="venn-circle mech" data-domain="mech" tabindex="0" cx="340" cy="245" r="190"/>
+      <circle class="venn-circle elec" data-domain="elec" tabindex="0" cx="580" cy="245" r="190"/>
+      <circle class="venn-circle nano" data-domain="nano" tabindex="0" cx="460" cy="425" r="190"/>
+
+      <g class="venn-copy zh">
+        <text class="venn-label" x="260" y="125" text-anchor="middle">機械與精密工程</text>
+        <text class="venn-sub" x="260" y="158" text-anchor="middle">力學 · CAD · FEA · 控制 · 撓性機構</text>
+        <text class="venn-label" x="660" y="125" text-anchor="middle">電子與數位系統</text>
+        <text class="venn-sub" x="660" y="158" text-anchor="middle">電路 · 電子 · 數位邏輯 · Verilog · FPGA</text>
+        <text class="venn-label" x="460" y="548" text-anchor="middle">半導體與奈米</text>
+        <text class="venn-sub" x="460" y="580" text-anchor="middle">固態 · 材料 · 元件 · 薄膜 · AFM</text>
+        <text class="venn-center" x="460" y="326">精密系統整合</text>
+        <text class="venn-center-sub" x="460" y="360">AFM · ENCODER · MEASUREMENT · GUI / UART</text>
+      </g>
+
+      <g class="venn-copy en">
+        <text class="venn-label venn-label-en" x="260" y="112" text-anchor="middle">
+          <tspan x="260" dy="0">Mechanical &amp;</tspan>
+          <tspan x="260" dy="29">Precision Engineering</tspan>
+        </text>
+        <text class="venn-sub" x="260" y="170" text-anchor="middle">Mechanics · CAD · FEA · Control · Flexures</text>
+        <text class="venn-label venn-label-en" x="660" y="112" text-anchor="middle">
+          <tspan x="660" dy="0">Electronics &amp;</tspan>
+          <tspan x="660" dy="29">Digital Systems</tspan>
+        </text>
+        <text class="venn-sub" x="660" y="170" text-anchor="middle">Circuits · Logic · Verilog · FPGA</text>
+        <text class="venn-label venn-label-en" x="460" y="536" text-anchor="middle">
+          <tspan x="460" dy="0">Semiconductor</tspan>
+          <tspan x="460" dy="29">&amp; Nanotechnology</tspan>
+        </text>
+        <text class="venn-sub" x="460" y="596" text-anchor="middle">Solid State · Materials · Devices · Thin Film · AFM</text>
+        <text class="venn-center" x="460" y="326">Precision System Integration</text>
+        <text class="venn-center-sub" x="460" y="360">AFM · ENCODER · MEASUREMENT · GUI / UART</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="domain-grid">
+    <article class="domain-card" data-domain="mech">
+      <h3 class="zh">機械與精密工程</h3><h3 class="en">Mechanical &amp; Precision Engineering</h3>
+      <ul class="zh"><li>五大力學與機構設計</li><li>CAD / FEA</li><li>Flexure Guide 與共振分析</li></ul>
+      <ul class="en"><li>Core mechanics and mechanism design</li><li>CAD / FEA</li><li>Flexure guides and resonance analysis</li></ul>
+    </article>
+    <article class="domain-card" data-domain="elec">
+      <h3 class="zh">電子與數位系統</h3><h3 class="en">Electronics &amp; Digital Systems</h3>
+      <ul class="zh"><li>電路、電子與數位邏輯</li><li>Verilog / FPGA</li><li>Encoder、PI 控制、UART</li></ul>
+      <ul class="en"><li>Circuits, electronics, and digital logic</li><li>Verilog / FPGA</li><li>Encoder, PI control, and UART</li></ul>
+    </article>
+    <article class="domain-card" data-domain="nano">
+      <h3 class="zh">半導體與奈米</h3><h3 class="en">Semiconductor &amp; Nano</h3>
+      <ul class="zh"><li>固態物理與電子材料</li><li>半導體元件與設備</li><li>薄膜與 AFM 奈米量測</li></ul>
+      <ul class="en"><li>Solid-state physics and electronic materials</li><li>Semiconductor devices and equipment</li><li>Thin films and AFM nano measurement</li></ul>
+    </article>
+    <article class="domain-card" data-domain="center">
+      <h3 class="zh">交集：系統整合</h3><h3 class="en">Intersection: System Integration</h3>
+      <ul class="zh"><li>從模型到量測驗證</li><li>機構、電子與軟體協作</li><li>可重複的工程成果</li></ul>
+      <ul class="en"><li>From modeling to measurement validation</li><li>Mechanical, electronic, and software integration</li><li>Repeatable engineering outcomes</li></ul>
+    </article>
+  </div>
+</div>
 </div></section>
 <section class="section"><div class="shell"><div class="section-head reveal"><div><span class="kicker">Credentials</span><h2 class="zh">認證與課程成果</h2><h2 class="en">Credentials & Coursework</h2></div><p class="zh">專業認證、研究研習與半導體訓練。</p><p class="en">Professional certification, research training, and semiconductor coursework.</p></div><div class="credential-grid">
   <article class="credential-card reveal"><div class="card-type">ACADEMIC PERFORMANCE</div><h3>GPA 3.95 / 4.3 · Top 15%</h3><p class="zh">臺大機械工程學系大學階段學業表現。</p><p class="en">Undergraduate academic performance in NTU Mechanical Engineering.</p></article>
