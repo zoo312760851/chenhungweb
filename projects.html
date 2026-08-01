@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engineering projects in AFM precision systems, flexure mechanisms, FPGA, encoder processing, and Qt/C++ GUI.">
+  <meta name="theme-color" content="#050b15">
+  <meta property="og:title" content="Projects | Chen-Hung Tsao">
+  <meta property="og:description" content="Engineering projects in AFM precision systems, flexure mechanisms, FPGA, encoder processing, and Qt/C++ GUI.">
+  <meta property="og:type" content="website">
+  <title>Projects | Chen-Hung Tsao</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050b15'/%3E%3Cpath d='M18 19h28v8H36v22h-8V27H18z' fill='%2370e6ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+  <div class="ambient-cursor" aria-hidden="true"></div>
+  <a class="skip-link" href="#main"><span class="zh">跳至主要內容</span><span class="en">Skip to content</span></a>
+  <header class="site-header" id="siteHeader">
+    <div class="nav shell">
+      <a class="brand" href="index.html" aria-label="Chen-Hung Tsao home">
+        <span class="brand-mark">CT</span>
+        <span class="brand-copy"><span class="brand-name">CHEN-HUNG TSAO</span><span class="brand-role">ENGINEERING PORTFOLIO</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation"><a href="index.html" data-page="index.html"><span class="zh">首頁</span><span class="en">Home</span></a><a href="resume.html" data-page="resume.html"><span class="zh">履歷</span><span class="en">Resume</span></a><a href="achievements.html" data-page="achievements.html"><span class="zh">成就</span><span class="en">Achievements</span></a><a href="projects.html" data-page="projects.html"><span class="zh">專案</span><span class="en">Projects</span></a><a href="about.html" data-page="about.html"><span class="zh">關於</span><span class="en">About</span></a></nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+<section class="page-hero compact"><div class="shell reveal"><span class="kicker">Projects</span><h1 class="page-title zh">工程專案</h1><h1 class="page-title en">Engineering Projects</h1><p class="page-intro zh">以系統架構、實際工作與量測結果呈現代表性實作。</p><p class="page-intro en">Representative work presented through system architecture, contributions, and measured results.</p></div></section>
+<section class="section"><div class="shell case-study">
+  <article class="project-card featured reveal"><div><span class="kicker">01 / AFM SYSTEM DEVELOPMENT</span><h2 class="zh">奈米精度 Flexure Guide 與量測驗證</h2><h2 class="en">Nano-precision flexure guide and measurement validation</h2><p class="zh">參與原子力顯微鏡系統的機構設計與驗證。以 CAD / FEA 評估位移、剛性、共振與耦合，再利用雷射位移量測與掃頻實驗比對模型。</p><p class="en">Contributed to the mechanical design and validation of an AFM system. CAD / FEA were used to evaluate travel, stiffness, resonance, and coupling, followed by laser displacement and frequency-sweep experiments.</p><div class="project-flow"><div class="flow-step"><b>01</b><span class="zh">第一代設計占用空間過大，重新設計橋式＋槓桿型撓性結構。</span><span class="en">Redesigned the initial oversized concept into a bridge-and-lever flexure mechanism.</span></div><div class="flow-step"><b>02</b><span class="zh">以 FEA 模擬最大位移量與前兩階共振頻率。</span><span class="en">Simulated maximum travel and the first two resonance modes with FEA.</span></div><div class="flow-step"><b>03</b><span class="zh">以雷射位移計與掃頻量測驗證模型。</span><span class="en">Validated the model using laser displacement and frequency-sweep measurements.</span></div></div></div><div class="project-visual"><svg viewBox="0 0 620 420" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Flexure guide workflow diagram"><path class="wire" d="M100 210H220M400 210H520M310 92V150M310 270V330"/><rect class="box" x="30" y="165" width="145" height="90" rx="18"/><text class="title" x="102" y="202" text-anchor="middle">CAD / FEA</text><text class="sub" x="102" y="226" text-anchor="middle">TRAVEL · STIFFNESS · MODES</text><rect class="box" x="220" y="150" width="180" height="120" rx="24"/><text class="title" x="310" y="198" text-anchor="middle">FLEXURE GUIDE</text><text class="sub" x="310" y="223" text-anchor="middle">PIEZO · BRIDGE · LEVER</text><rect class="box" x="445" y="165" width="145" height="90" rx="18"/><text class="title" x="517" y="202" text-anchor="middle">MEASUREMENT</text><text class="sub" x="517" y="226" text-anchor="middle">LASER · SWEEP</text><rect class="box" x="237" y="34" width="146" height="58" rx="16"/><text class="title" x="310" y="69" text-anchor="middle">REQUIREMENTS</text><rect class="box" x="237" y="330" width="146" height="58" rx="16"/><text class="title" x="310" y="365" text-anchor="middle">VALIDATION</text></svg></div></article>
+  <div class="project-results reveal"><div class="result"><small>FEA MAX TRAVEL</small><strong>4.92 μm</strong><span class="zh">理論值</span><span class="en">Simulation</span></div><div class="result"><small>MEASURED TRAVEL</small><strong>≈ 4.3 μm</strong><span class="zh">實際量測</span><span class="en">Measurement</span></div><div class="result"><small>MODE 01</small><strong>2.22%</strong><span class="zh">模擬／量測差異</span><span class="en">Simulation / measurement difference</span></div><div class="result"><small>MODE 02</small><strong>14.73%</strong><span class="zh">模擬／量測差異</span><span class="en">Simulation / measurement difference</span></div></div>
+  <article class="project-card featured reveal"><div><span class="kicker">02 / FPGA & GUI</span><h2 class="zh">Encoder 訊號處理與 Qt/C++ GUI</h2><h2 class="en">Encoder signal processing and Qt/C++ GUI</h2><p class="zh">以 Verilog 在 FPGA 上讀取 A+、A−、B+、B− 四組 Encoder 訊號，利用反相信號檢查提升可靠性，並以 Qt/C++ 建立 UART 雙向通訊介面。</p><p class="en">Used Verilog on an FPGA to read A+, A−, B+, and B− encoder signals, adding complementary-signal checks for reliability and building a bidirectional UART interface with Qt/C++.</p><div class="project-flow"><div class="flow-step"><b>01</b><span class="zh">辨識 Encoder 數位訊號與方向。</span><span class="en">Decode encoder digital signals and direction.</span></div><div class="flow-step"><b>02</b><span class="zh">利用 A−、B− 反相信號進行錯誤檢查。</span><span class="en">Use complementary A− and B− signals for error checks.</span></div><div class="flow-step"><b>03</b><span class="zh">透過 UART 傳輸多位元資料與開關狀態。</span><span class="en">Exchange multi-bit data and switch states over UART.</span></div></div></div><div class="project-visual"><svg viewBox="0 0 620 420" preserveAspectRatio="xMidYMid meet" role="img" aria-label="FPGA and GUI communication diagram"><path class="wire" d="M170 210H245M375 210H450"/><rect class="box" x="25" y="150" width="145" height="120" rx="20"/><text class="title" x="97" y="192" text-anchor="middle">ENCODER</text><text class="sub" x="97" y="220" text-anchor="middle">A+ A− B+ B−</text><text class="sub" x="97" y="244" text-anchor="middle">POSITION / DIRECTION</text><rect class="box" x="245" y="132" width="130" height="156" rx="22"/><text class="title" x="310" y="183" text-anchor="middle">FPGA</text><text class="sub" x="310" y="211" text-anchor="middle">VERILOG</text><text class="sub" x="310" y="237" text-anchor="middle">VALIDATION</text><rect class="box" x="450" y="150" width="145" height="120" rx="20"/><text class="title" x="522" y="192" text-anchor="middle">QT / C++ GUI</text><text class="sub" x="522" y="220" text-anchor="middle">UART</text><text class="sub" x="522" y="244" text-anchor="middle">DISPLAY / CONTROL</text></svg></div></article>
+</div></section>
+</main>
+  <footer>
+    <div class="shell footer-row"><span>© <span id="year"></span> Chen-Hung Tsao.</span><div class="footer-links"><a href="mailto:zoo312760851@gmail.com">EMAIL</a><a href="https://github.com/zoo312760851" target="_blank" rel="noreferrer">GITHUB</a><a href="#main">TOP</a></div></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,13 +1,17 @@
-# Chen-Hung Tsao Engineering Portfolio — V3
+# Chen-Hung Tsao Engineering Portfolio V6
 
-A single-file GitHub Pages portfolio with a blue-black engineering visual system.
+A multi-page GitHub Pages portfolio.
 
-## Deploy
+## Files to upload
+Upload every file in this folder to the repository root:
 
-1. Upload `index.html`, `404.html`, and `.nojekyll` to the repository root.
-2. In GitHub: **Settings → Pages → Deploy from a branch → main / (root)**.
-3. Wait for the Pages workflow to finish, then refresh the website with `Ctrl + F5`.
+- index.html
+- resume.html
+- achievements.html
+- projects.html
+- about.html
+- 404.html
+- styles.css
+- app.js
 
-## Privacy note
-
-The public site intentionally excludes phone number and home address. It includes only the public contact email and GitHub account.
+Do not upload only `index.html`; the other pages and shared assets are required.
