@@ -393,3 +393,32 @@ body { font-size: 16px; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .ambient-cursor { display: none; }
 }
+
+
+/* V10 mobile Venn alignment fix */
+@media (max-width: 700px) {
+  .venn-shell {
+    padding: 10px;
+    overflow: hidden;
+  }
+  .venn-stage {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 920 / 650;
+    display: block;
+    overflow: hidden;
+  }
+  .venn-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    transform: none;
+    transform-origin: center;
+  }
+  .venn-label { font-size: 32px; }
+  .venn-label-en { font-size: 27px; }
+  .venn-sub { font-size: 19px; }
+  .venn-center { font-size: 25px; }
+  .venn-center-sub { font-size: 16px; letter-spacing: .035em; }
+}
